@@ -2,14 +2,13 @@
 
 
 
-import Header from "../components/Header"
 import Button from 'react-bootstrap/Button';
 
 
 
 
 export default function HomePage() {
-  // <Header />
+
   return (
 
 
@@ -25,35 +24,13 @@ export default function HomePage() {
       }}
     >
 
-
-
-
-
-      {/* <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <h1
-            className="header"
-            style={{
-              textAlign: 'center',
-              color: 'white',
-              fontSize: '100px',
-              fontFamily: 'Cooper Std'
-
-            }}
-          > */}
-
       <h1>gifty.
       </h1>
       <Button variant="danger" style={{
         fontSize: "45px",
         fontFamily: "Young Serif",
       }}>Create your gifty box</Button>
-      {/* </div>  */}
+
 
     </main >
 
