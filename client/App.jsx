@@ -12,7 +12,7 @@ export default function App() {
   return (
 
     <AppProvider>
-      {/* <BrowserRouter> */}
+
       <Header />
       <div className="container pt-5">
         <Routes>
@@ -29,8 +29,7 @@ export default function App() {
           <Route path="/logout" element={<Logout />} />
         </Routes>
       </div>
-      {/* </BrowserRouter> */}
-      <HomePage />
+
     </AppProvider>
 
   )
