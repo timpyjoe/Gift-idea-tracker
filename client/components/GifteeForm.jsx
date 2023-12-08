@@ -41,6 +41,7 @@ export default function CreateGiftee() {
       },
       body: JSON.stringify(newGiftee),
     })
+      .then
       .catch(error => {
         window.alert(error);
         return;

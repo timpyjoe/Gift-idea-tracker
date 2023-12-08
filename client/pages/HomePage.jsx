@@ -2,6 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom'
 
 export default function HomePage() {
   return (
@@ -18,20 +19,22 @@ export default function HomePage() {
           backgroundSize: 'cover',
         }}
       >
-         {/* <div className='nav' style={{ borderRadius:"20px", position: 'absolute', top: 0, width: '100%',  display: "flex", justifyContent:"center",
-    alignItems: "center", paddingTop:"50px" }}>
-        <Navbar bg="light" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar> */}
+        <div className='nav' style={{
+          borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
+          alignItems: "center", paddingTop: "50px"
+        }}>
+          {/* <Navbar bg="dark" data-bs-theme="dark">
+            <Container>
+              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+              <Nav className="me-auto">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#features">Features</Nav.Link>
+                <Nav.Link href="#pricing">Pricing</Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar> */}
 
-        {/* </div> */}
+      </div> 
         <div
           style={{
             display: 'flex',
@@ -46,17 +49,16 @@ export default function HomePage() {
               color: 'white',
               fontSize: '100px',
               fontFamily: 'Cooper Std'
-             
+
             }}
           >
             gifty.
           </h1>
           <div>
             <Button variant="danger" style={{
-              borderRadius:"30px",
               fontSize:"45px",
               fontFamily: "Young Serif",
-            }}>start</Button>{' '}
+            }}>Create your gifty box</Button>{' '}
           </div>
         </div>
       </main>
