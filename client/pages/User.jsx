@@ -1,7 +1,7 @@
 
 
 
-export default function PrivatePage(){
+export default function User() {
 
   return (
     <>
