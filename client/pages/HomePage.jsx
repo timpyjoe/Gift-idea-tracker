@@ -1,13 +1,18 @@
+
+
+
+
+
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom'
+
+import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+
+
 
 export default function HomePage() {
   return (
     <>
-
       <main
         className="main"
         style={{
@@ -19,22 +24,10 @@ export default function HomePage() {
           backgroundSize: 'cover',
         }}
       >
-        <div className='nav' style={{
-          borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
-          alignItems: "center", paddingTop: "50px"
-        }}>
-          {/* <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-              <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar> */}
 
-        </div>
+        <Navbar />
+
+
         <div
           style={{
             display: 'flex',
@@ -54,14 +47,12 @@ export default function HomePage() {
           >
             gifty.
           </h1>
-          <div>
-            <Button variant="danger" style={{
-              fontSize: "45px",
-              fontFamily: "Young Serif",
-            }}>Create your gifty box</Button>{' '}
-          </div>
+          <Button variant="danger" onClick={handleShow} style={{
+            fontSize: "45px",
+            fontFamily: "Young Serif",
+          }}>Create your gifty box</Button>
         </div>
-      </main>
+      </main >
     </>
   );
 }

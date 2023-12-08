@@ -11,6 +11,7 @@ import AuthPage from "./pages/AuthPage.jsx";
 import Logout from "./pages/Logout.jsx";
 import User from "./pages/User.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
+import SignupModal from "./components/SignupModal.jsx"
 
 
 // Define the accessible routes, and which components respond to which URL
@@ -25,8 +26,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'authpage',
-        element: <AuthPage />,
+        path: '/',
+        element: <SignupModal />,
       },
       {
         path: 'user',
