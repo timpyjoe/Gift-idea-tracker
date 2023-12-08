@@ -18,9 +18,9 @@ export default function HomePage() {
           backgroundSize: 'cover',
         }}
       >
-        <div className='nav' style={{ borderRadius:"20px", position: 'absolute', top: 0, width: '100%',  display: "flex", justifyContent:"center",
+         {/* <div className='nav' style={{ borderRadius:"20px", position: 'absolute', top: 0, width: '100%',  display: "flex", justifyContent:"center",
     alignItems: "center", paddingTop:"50px" }}>
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="light" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -29,9 +29,9 @@ export default function HomePage() {
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
-      </Navbar>
+      </Navbar> */}
 
-        </div>
+        {/* </div> */}
         <div
           style={{
             display: 'flex',
@@ -53,6 +53,7 @@ export default function HomePage() {
           </h1>
           <div>
             <Button variant="danger" style={{
+              borderRadius:"30px",
               fontSize:"45px",
               fontFamily: "Young Serif",
             }}>start</Button>{' '}

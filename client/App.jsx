@@ -5,7 +5,7 @@ import { Header, ProtectedRoute, GifteeForm } from './components';
 import { HomePage, AuthPage, Logout, PrivatePage } from './pages/'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HomePage from './pages/HomePage';
+
 
 export default function App() {
 
