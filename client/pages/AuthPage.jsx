@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
+// import { useState, useEffect } from "react"
 import Auth from "../components/Auth"
 
-export default function AuthPage(){
+export default function AuthPage() {
 
 
   return (
