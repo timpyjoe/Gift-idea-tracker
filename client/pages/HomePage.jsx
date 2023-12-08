@@ -2,6 +2,7 @@
 
 
 
+
 import Button from 'react-bootstrap/Button';
 
 
@@ -22,15 +23,6 @@ export default function HomePage() {
         backgroundSize: 'cover',
       }}
     >
-  
-    
-
-
-
-
-
-
-
 
 
       <h1>gifty.
