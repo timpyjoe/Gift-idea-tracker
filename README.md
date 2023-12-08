@@ -38,7 +38,7 @@ A user friendly app to create a "gifty box" that holds friends, family members, 
 
 Github https://github.com/
 
-Heroku https://.herokuapp.com/
+Heroku https://gifty-gift-idea-tracker-9346ec5c500d.herokuapp.com/ 
 
 <a id="credits"></a>
 ## Credits

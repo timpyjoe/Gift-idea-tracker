@@ -101,6 +101,7 @@ export default function CreateGiftee() {
             </Col>
           </Col>
         </Row>
+        <Button variant="danger">Submit</Button>{'Submit'}
       </Form>
     </div>
   )
