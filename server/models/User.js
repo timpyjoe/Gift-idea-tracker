@@ -10,10 +10,10 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  giftees: {
+  giftees: [{
     type: Schema.Types.ObjectId,
     ref: "Giftee"
-  }
+  }]
 },{
   timestamps: true
 },
