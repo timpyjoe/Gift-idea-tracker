@@ -6,44 +6,125 @@ const gifteeSchema = new Schema({
     required: true,
   },
   birthday: {
+    type: Date,
+    required: true,
+    default: Date.now
+  },
+  gifter: {
+    gifterId: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true
+    },
+    gifterName: {
+      type: Schema.Types.String,
+      ref: "User",
+      required: true
+    }
+  },
+  relationship: {
     type: String,
-    required: true
+    default: "Friend"
   },
   favorites: {
-    colors:  String,
-    music: String,
-    flowers: String,
-    clothes: String,
-    foodSnacks: String,
-    candy: String,
-    coffeetea: String,
-    stores: String,
-    beverages: String,
-    movies: String,
-    shows: String,
-    scents: String,
-    accessories: String,
-    dessert: String,
-    sports: String
+    colors: {
+      type: String,
+      default: ""
+    },
+    music: {
+      type: String,
+      default: ""
+    },
+    flowers: {
+      type: String,
+      default: ""
+    },
+    clothes: {
+      type: String,
+      default: ""
+    },
+    foodSnacks: {
+      type: String,
+      default: ""
+    },
+    candy: {
+      type: String,
+      default: ""
+    },
+    coffeetea: {
+      type: String,
+      default: ""
+    },
+    stores: {
+      type: String,
+      default: ""
+    },
+    beverages: {
+      type: String,
+      default: ""
+    },
+    movies: {
+      type: String,
+      default: ""
+    },
+    shows: {
+      type: String,
+      default: ""
+    },
+    scents: {
+      type: String,
+      default: ""
+    },
+    accessories: {
+      type: String,
+      default: ""
+    },
+    dessert: {
+      type: String,
+      default: ""
+    },
+    sports: {
+      type: String,
+      default: ""
+    }
   },
   sizes: {
-    shirttop: String,
-    pantsbottom: Schema.Types.Mixed,
-    dress: Number,
-    shoe: Number,
-    ring: Number
+    shirttop: {
+      type: String,
+      default: ""
+    },
+    pantsbottom: {
+      type: Number,
+      defualt: ""
+    },
+    dress: {
+      type: Number,
+      default: ""
+    },
+    shoe: {
+      type: Number,
+      default: ""
+    },
+    ring: {
+      type: Number,
+      default: ""
+    }
   },
   hobbies: {
-    type: String
+    type: String,
+    default: ""
   },
   collections: {
-    type: String
+    type: String,
+    default: ""
   },
   dontneed: {
-    type: String
+    type: String,
+    default: ""
   },
   blank: {
-    type: String
+    type: String,
+    default: ""
   }
 });
 
