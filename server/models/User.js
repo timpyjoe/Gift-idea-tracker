@@ -9,7 +9,11 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  giftees: [{
+    type: Schema.Types.ObjectId,
+    ref: "Giftee"
+  }]
 },{
   timestamps: true
 },
