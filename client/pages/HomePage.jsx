@@ -11,7 +11,6 @@ export default function HomePage() {
 
   return (
 
-
     <main
       className="main"
       style={{
@@ -23,6 +22,16 @@ export default function HomePage() {
         backgroundSize: 'cover',
       }}
     >
+  
+    
+
+
+
+
+
+
+
+
 
       <h1>gifty.
       </h1>
@@ -33,6 +42,7 @@ export default function HomePage() {
 
 
     </main >
+
 
   );
 }
