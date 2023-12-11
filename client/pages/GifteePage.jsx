@@ -1,11 +1,11 @@
 import { useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Giftee from "../../server/models/Giftee";
+// import Giftee from "../../server/models/Giftee";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import React from 'react'
-import Stack from 'react-bootstrap/Stack';
+
 import "./style.css"
 
 function GifteePage() {
