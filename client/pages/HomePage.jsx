@@ -10,6 +10,7 @@ import Button from 'react-bootstrap/Button';
 
 export default function HomePage() {
 
+
   return (
 
 
@@ -32,18 +33,6 @@ export default function HomePage() {
 
 
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
