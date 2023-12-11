@@ -1,5 +1,7 @@
-const db = require("../config/connection")
-
+const db = require("../config/connection");
+const {User, Giftee} = require('../models');
+const userData = require('./user.json')
+const gifteeData = require('./giftee.json')
 /*
   To seed data:
 
@@ -9,9 +11,13 @@ const db = require("../config/connection")
 
 */
 
-
-// db.once('open', async () => {
-//   await MODEL.insertMany(seedData)
-//   console.log("seeding complete")
-//   process.exit(0)
-// });
+db.once("open", async () => {
+  await User.insertMany(userData);
+  console.log("seeding complete");
+  process.exit(0);
+});
+db.once("open", async () => {
+  await Giftee.insertMany(gifteeData);
+  console.log("seeding complete");
+  process.exit(0);
+});
