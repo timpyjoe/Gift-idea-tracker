@@ -39,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'logout',
         element: <Logout />
+      },
+      {
+        path: 'gifteepage',
+        element: <GifteePage />
       }
     ],
   },

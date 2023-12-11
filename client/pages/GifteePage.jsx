@@ -1,14 +1,29 @@
 import { useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom"
 
-import Giftee from "../../server/models/Giftee";
+// import Giftee from "../../server/models/Giftee";
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import React from 'react'
-import Stack from 'react-bootstrap/Stack';
+
 import "./style.css"
 
-function GifteePage() {
+
+export default function GifteePage() {
+
+  // const { name } = useParams()
+  // const [currentGifteeInfo, setCurrentGifteeInfo] = useState()
+
+  // function getGifteeInfo() {
+
+  // }
+
+  // useEffect(() => {
+  //   getGifteeInfo()
+  // }, [])
+
+
   return (
 
 
@@ -17,11 +32,7 @@ function GifteePage() {
       className="main-container"
 
     ><h2 className="about-likes-container">About and Likes</h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+
 
       <CardGroup className="gift-list-container">
         <h2 > List of Gifts</h2 >
@@ -67,4 +78,3 @@ function GifteePage() {
 
   )
 }
-export default GifteePage
