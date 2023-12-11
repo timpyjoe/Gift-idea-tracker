@@ -10,6 +10,19 @@ export const useAppCtx = () => useContext(AppContext)
 export default function AppProvider(props) {
 
   const [user, setUser] = useState({})
+  const [form, setForm] = useState({
+    name: "",
+    relation: "",
+    birthday: "",
+    tops: "",
+    bottoms: "",
+    shoes: "",
+    color: "",
+    flower: "",
+    food: "",
+    sports: "",
+    cards: ""
+  });
 
   async function verifyUser() {
     const cookie = Cookie.get("auth-cookie")
@@ -37,7 +50,7 @@ export default function AppProvider(props) {
 
 
   return (
-    <AppContext.Provider value={{ user, verifyUser }}>
+    <AppContext.Provider value={{ user, verifyUser, form, setForm }}>
       {props.children}
     </AppContext.Provider>
   )

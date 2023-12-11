@@ -1,29 +1,34 @@
 import { useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom"
+// import { useParams, Link } from "react-router-dom"
 
 // import Giftee from "../../server/models/Giftee";
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import React from 'react'
+import { Card } from 'react-bootstrap';
+import { CardGroup } from "react-bootstrap";
 
+import { useParams } from "react-router-dom";
 import "./style.css"
 
 
 export default function GifteePage() {
 
-  // const { name } = useParams()
-  // const [currentGifteeInfo, setCurrentGifteeInfo] = useState()
+  // const { id } = useParams()  // this is the id of the giftee
 
-  // function getGifteeInfo() {
-
-  // }
-
-  // useEffect(() => {
-  //   getGifteeInfo()
-  // }, [])
+  // Make a fetch request for the data related to this giftee based on their id
 
 
+  const [currentGifteeInfo, setCurrentGifteeInfo] = useState(null)
+
+  async function getGifteeInfo() {
+
+  }
+
+  useEffect(() => {
+    getGifteeInfo()
+  }, [])
+
+
+  if (!currentGifteeInfo) return <></>
   return (
 
 
@@ -32,11 +37,12 @@ export default function GifteePage() {
       className="main-container"
 
     ><h2 className="about-likes-container">About and Likes</h2>
+      {/* <p>Name: {currentGifteeInfo.name}</p> */}
 
 
       <CardGroup className="gift-list-container">
         <h2 > List of Gifts</h2 >
-
+        {/* <p>Name: {currentGifteeInfo.name}</p> */}
         <Card className="list-items">
           <Card.Img variant="top" src="holder.js/100px160" />
           <Card.Body>
