@@ -27,6 +27,10 @@ export default function Auth({ usage = "signup" }) {
       })
       const response = await query.json()
       console.log(response)
+
+      // the user object we get back should have an array of giftees
+
+
       if (response.result === "success") {
         window.location.href = "/"
       }

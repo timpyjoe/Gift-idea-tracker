@@ -1,24 +1,49 @@
 import React, { useState } from "react";
+
 import { useNavigate } from "react-router";
+import { useAppCtx } from "../utils/AppProvider";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
 export default function CreateGiftee() {
+
+
+
   const [form, setForm] = useState({
     name: "",
-    relation: "",
     birthday: "",
+    gifter: "",
+    relationship: "",
     tops: "",
     bottoms: "",
-    shoes: "",
-    color: "",
-    flower: "",
-    food: "",
+    favorites: "", // how to link favorites to the following--
+    colors: "",
+    flowers: "",
+    clothes: "",
+    foodSnacks: "",
+    candy: "",
+    coffeetea: "",
+    stores: "",
+    beverages: "",
+    movies: "",
+    shows: "",
+    scents: "",
+    accessories: "",
+    dessert: "",
     sports: "",
-    cards: ""
+    sizes: "", // how to link sizes to clothes--
+    shirttop: "",
+    pantsbottom: "",
+    dress: "",
+    shoe: "",
+    ring: "",
+    hobbies: "",
+    collections: "",
+    dontneed: "",
+    blank: ""
+
   });
-  const navigate = useNavigate();
 
   // These methods will update the state properties.
   function updateForm(value) {
@@ -49,16 +74,36 @@ export default function CreateGiftee() {
 
     setForm({
       name: "",
-      relation: "",
       birthday: "",
+      gifter: "",
+      relationship: "",
       tops: "",
       bottoms: "",
-      shoes: "",
-      color: "",
-      flower: "",
-      food: "",
+      favorites: "", // how to link favorites to the following--
+      colors: "",
+      flowers: "",
+      clothes: "",
+      foodSnacks: "",
+      candy: "",
+      coffeetea: "",
+      stores: "",
+      beverages: "",
+      movies: "",
+      shows: "",
+      scents: "",
+      accessories: "",
+      dessert: "",
       sports: "",
-      cards: ""
+      sizes: "", // how to link sizes to clothes--
+      shirttop: "",
+      pantsbottom: "",
+      dress: "",
+      shoe: "",
+      ring: "",
+      hobbies: "",
+      collections: "",
+      dontneed: "",
+      blank: ""
     });
     navigate("/");
   }
@@ -74,13 +119,20 @@ export default function CreateGiftee() {
             <Form.Control placeholder="Giftee name" />
           </Col>
           <Col>
-            <Form.Control placeholder="Relation" />
-          </Col>
-          <Col>
             <Form.Control placeholder="Birthday" />
           </Col>
           <Col>
-            <Form.Control placeholder="Shirts or tops size" />
+            <Form.Control placeholder="Gifter" />
+          </Col>
+          <Col>
+            <Form.Control placeholder="Relation/relationship" />
+          </Col>
+          <Col>
+            <label>Favorites</label>
+            <Form.Control placeholder="Colors" />
+          </Col>
+          <Col>
+            <Form.Control placeholder="Bottoms or pants size" />
           </Col>
           <Col>
             <Form.Control placeholder="Bottoms or pants size" />
