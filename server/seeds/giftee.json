@@ -1,0 +1,78 @@
+[
+  {
+    "name":"Frankie",
+    "birthday":"january 16th",
+    "favorites":{
+      "colors": "green",
+      "music": "rap",
+      "flowers": "roses",
+      "clothes": "hoodies",
+      "foodSnacks": "chips",
+      "candy": "airheads",
+      "coffeetea": "coffee",
+      "stores": "Amazon",
+      "beverages": "peach tea",
+      "movies": "comedy",
+      "shows": "anime",
+      "scents": "floural",
+      "accessories": "chain",
+      "dessert": "brownies",
+      "sports": "basketball"
+    },
+    "sizes": {
+    "shirttop": "L",
+    "pantsbottom": {
+      "waist": 32,
+      "length": 34
+    },
+    "dress": 0,
+    "shoe": 11.5,
+    "ring": 7
+  },
+  "hobbies": "gaming",
+  "collections": "shoes",
+  "dontneed": "A keyboard",
+  "blank": ""
+},
+{
+    "name":"gary",
+    "birthday":"december 8th",
+    "favorites":{
+      "colors": "red",
+      "music": "jazz",
+      "flowers": "daisys",
+      "clothes": "socks",
+      "foodSnacks": "cereal",
+      "candy": "licorice",
+      "coffeetea": "coffee",
+      "stores": "Amazon",
+      "beverages": "mountain dew",
+      "movies": "romance",
+      "shows": "The Golden Girls",
+      "scents": "cinnamon",
+      "accessories": "watch",
+      "dessert": "cake",
+      "sports": "football"
+    },
+    "sizes": {
+    "shirttop": "L",
+    "pantsbottom": {
+      "waist": 33,
+      "length": 33
+    },
+    "dress": 0,
+    "shoe": 10,
+    "ring": 7
+  },
+  "hobbies": "coding",
+  "collections": "bottle caps",
+  "dontneed": "underwear",
+  "blank": ""
+}  
+]
+
+
+
+
+
+
