@@ -10,19 +10,7 @@ export const useAppCtx = () => useContext(AppContext)
 export default function AppProvider(props) {
 
   const [user, setUser] = useState({})
-  const [form, setForm] = useState({
-    name: "",
-    relation: "",
-    birthday: "",
-    tops: "",
-    bottoms: "",
-    shoes: "",
-    color: "",
-    flower: "",
-    food: "",
-    sports: "",
-    cards: ""
-  });
+
 
   async function verifyUser() {
     const cookie = Cookie.get("auth-cookie")
@@ -35,6 +23,7 @@ export default function AppProvider(props) {
       const query = await fetch("/api/user/verify")
       const response = await query.json()
       if (response.result === "success") {
+        // the user object we get back should have an array of giftees
         setUser(response.payload)
       }
     } catch (err) {
@@ -50,7 +39,7 @@ export default function AppProvider(props) {
 
 
   return (
-    <AppContext.Provider value={{ user, verifyUser, form, setForm }}>
+    <AppContext.Provider value={{ user, verifyUser }}>
       {props.children}
     </AppContext.Provider>
   )
