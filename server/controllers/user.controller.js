@@ -46,7 +46,7 @@ async function authenticate(data){
 
 async function getAllItems() {
   try {
-    return await Model.find();
+    return await Model.find().populate('giftees');
   } catch (err) {
     throw new Error(err)
   }
@@ -54,7 +54,7 @@ async function getAllItems() {
 
 async function getItemById(id) {
   try {
-    return await Model.findById(id);
+    return await Model.findById(id).populate('giftees');
   } catch (err) {
     throw new Error(err)
   }
