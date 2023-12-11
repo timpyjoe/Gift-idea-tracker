@@ -18,9 +18,7 @@ function GifteePage() {
         border: '1px solid green',
       }}
 
-    ><h2>About & Likes</h2>
-
-      <h2>List of Gifts</h2>
+    ><h2>List of Gifts</h2>
       <ul>
         <li></li>
 
@@ -31,7 +29,6 @@ function GifteePage() {
         <li></li>
 
       </ul>
-
     </main>
 
   )

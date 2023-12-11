@@ -12,6 +12,7 @@ import Logout from "./pages/Logout.jsx";
 import User from "./pages/User.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import Auth from './components/Auth.jsx';
+import GifteePage from './pages/GifteePage.jsx';
 
 
 
