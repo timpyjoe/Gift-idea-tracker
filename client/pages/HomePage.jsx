@@ -10,7 +10,10 @@ import Button from 'react-bootstrap/Button';
 
 export default function HomePage() {
 
+
   return (
+
+
 
     <main
       className="main"
@@ -23,6 +26,15 @@ export default function HomePage() {
         backgroundSize: 'cover',
       }}
     >
+      <div className='nav' style={{
+        borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
+        alignItems: "center", paddingTop: "50px"
+      }}>
+
+
+      </div>
+
+
 
 
       <h1>gifty.
