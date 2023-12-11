@@ -11,16 +11,8 @@ const gifteeSchema = new Schema({
     default: Date.now
   },
   gifter: {
-    gifterId: {
-      type: Schema.Types.ObjectId,
-      ref: "User",
-      required: true
-    },
-    gifterName: {
-      type: Schema.Types.String,
-      ref: "User",
-      required: true
-    }
+    type: Schema.Types.ObjectId,
+    ref: "User"
   },
   relationship: {
     type: String,
