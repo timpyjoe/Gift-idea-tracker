@@ -8,12 +8,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import HomePage from "./pages/HomePage.jsx";
 import AuthPage from "./pages/AuthPage.jsx";
-import Logout from "./pages/Logout.jsx";
-import User from "./pages/User.jsx";
+import LogoutPage from "./pages/LogoutPage.jsx";
+import UserPage from "./pages/UserPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import GifteePage from './pages/GifteePage.jsx';
-import { LogoutPage } from './pages/index.js';
-import UserPage from '../../../../homework/Gift-idea-tracker/client/pages/UserPage.jsx';
+// import { LogoutPage } from './pages/index.js';
+// import UserPage from '../../../../homework/Gift-idea-tracker/client/pages/UserPage.jsx';
 
 
 

@@ -22,10 +22,14 @@ export default function HomePage() {
         backgroundSize: 'cover',
       }}
     >
-      <div className='nav' style={{
+
+      <div className='main-container' style={{
+        display: 'flex',
         borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
         alignItems: "center", paddingTop: "50px"
       }}>
+        <h1>gifty.
+        </h1>
 
 
       </div>
@@ -33,8 +37,7 @@ export default function HomePage() {
 
 
 
-      <h1>gifty.
-      </h1>
+
       <Button
         variant="danger"
         style={{
