@@ -10,41 +10,6 @@ export default function CreateGiftee() {
 
 
 
-  const [form, setForm] = useState({
-    name: "",
-    birthday: "",
-    gifter: "",
-    relationship: "",
-    tops: "",
-    bottoms: "",
-    favorites: "", // how to link favorites to the following--
-    colors: "",
-    flowers: "",
-    clothes: "",
-    foodSnacks: "",
-    candy: "",
-    coffeetea: "",
-    stores: "",
-    beverages: "",
-    movies: "",
-    shows: "",
-    scents: "",
-    accessories: "",
-    dessert: "",
-    sports: "",
-    sizes: "", // how to link sizes to clothes--
-    shirttop: "",
-    pantsbottom: "",
-    dress: "",
-    shoe: "",
-    ring: "",
-    hobbies: "",
-    collections: "",
-    dontneed: "",
-    blank: ""
-
-  });
-
   // These methods will update the state properties.
   function updateForm(value) {
     return setForm((prev) => {
@@ -130,25 +95,83 @@ export default function CreateGiftee() {
           <Col>
             <label>Favorites</label>
             <Form.Control placeholder="Colors" />
+
+
           </Col>
           <Col>
             <Form.Control placeholder="Bottoms or pants size" />
+
           </Col>
           <Col>
-            <Form.Control placeholder="Bottoms or pants size" />
+            <Form.Control placeholder="Music" />
           </Col>
           <Col>
-            <Form.Control placeholder="Favorite color" />
+            <Form.Control placeholder="Flowers" />
+          </Col>
+          <Col>
+            <Form.Control placeholder="Clothes" />
             <Col>
-              <Form.Control placeholder="Favorite flower" />
+              <Form.Control placeholder="Food or Snacks" />
             </Col>
             <Col>
-              <Form.Control placeholder="Favorite candy, food, snack..." />
+              <Form.Control placeholder="Candy" />
               <Col>
-                <Form.Control placeholder="Sports team or sport" />
+                <Form.Control placeholder="Coffee or Tea" />
               </Col>
               <Col>
-                <Form.Control placeholder="Ideas for gift cards, stores, restaurants..." />
+                <Form.Control placeholder="Stores" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Beverages" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Movies" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Shows" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Scents" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Accessories" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Desserts" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Sports or Sports Team" />
+              </Col>
+              <Col>
+                <label>Sizes:</label>
+                <Form.Control placeholder="Shirt or Top" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Pants or Bottoms" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Dress" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Shoe" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Ring" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Hobbies..." />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Collections..." />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Don't Need..." />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Coffee or Tea" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Ideas for gift cards, crafts, diy gifts and more!" />
               </Col>
             </Col>
           </Col>

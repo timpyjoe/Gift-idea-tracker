@@ -1,8 +1,4 @@
 
-
-
-
-
 import Button from 'react-bootstrap/Button';
 
 
@@ -39,10 +35,12 @@ export default function HomePage() {
 
       <h1>gifty.
       </h1>
-      <Button variant="danger" style={{
-        fontSize: "45px",
-        fontFamily: "Young Serif",
-      }}>Create your gifty box</Button>
+      <Button
+        variant="danger"
+        style={{
+          fontSize: "45px",
+          fontFamily: "Young Serif",
+        }}>Create your gifty box</Button>
 
 
     </main >
