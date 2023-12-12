@@ -10,7 +10,7 @@ import Button from 'react-bootstrap/Button';
 import "./stylePage.css"
 
 
-export default function UserPage() {
+export default function User() {
 
   return (
 
