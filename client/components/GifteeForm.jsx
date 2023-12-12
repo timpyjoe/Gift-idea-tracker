@@ -10,41 +10,6 @@ export default function CreateGiftee() {
 
 
 
-  const [form, setForm] = useState({
-    name: "",
-    birthday: "",
-    gifter: "",
-    relationship: "",
-    tops: "",
-    bottoms: "",
-    favorites: "", // how to link favorites to the following--
-    colors: "",
-    flowers: "",
-    clothes: "",
-    foodSnacks: "",
-    candy: "",
-    coffeetea: "",
-    stores: "",
-    beverages: "",
-    movies: "",
-    shows: "",
-    scents: "",
-    accessories: "",
-    dessert: "",
-    sports: "",
-    sizes: "", // how to link sizes to clothes--
-    shirttop: "",
-    pantsbottom: "",
-    dress: "",
-    shoe: "",
-    ring: "",
-    hobbies: "",
-    collections: "",
-    dontneed: "",
-    blank: ""
-
-  });
-
   // These methods will update the state properties.
   function updateForm(value) {
     return setForm((prev) => {
@@ -130,6 +95,12 @@ export default function CreateGiftee() {
           <Col>
             <label>Favorites</label>
             <Form.Control placeholder="Colors" />
+
+
+          </Col>
+          <Col>
+            <Form.Control placeholder="Bottoms or pants size" />
+
           </Col>
           <Col>
             <Form.Control placeholder="Music" />

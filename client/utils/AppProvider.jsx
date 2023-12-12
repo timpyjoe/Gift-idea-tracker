@@ -11,6 +11,7 @@ export default function AppProvider(props) {
 
   const [user, setUser] = useState({})
 
+
   async function verifyUser() {
     const cookie = Cookie.get("auth-cookie")
 
@@ -22,6 +23,7 @@ export default function AppProvider(props) {
       const query = await fetch("/api/user/verify")
       const response = await query.json()
       if (response.result === "success") {
+        // the user object we get back should have an array of giftees
         setUser(response.payload)
       }
     } catch (err) {

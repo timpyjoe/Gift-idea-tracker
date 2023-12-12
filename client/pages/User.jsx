@@ -13,6 +13,7 @@ import "./style.css"
 export default function User() {
 
   return (
+
     <main><h1 className="title">gifty.</h1>
       <h2 className="Welcome">Welcome to your gifty. box! </h2>
 
@@ -35,5 +36,19 @@ export default function User() {
         <a href="https://amazon.com" target="_blank"></a>
       </section>
     </main>
+
+    <>
+      <h1>Private Page</h1>
+      <p>This is an example of a page that would require an authenticated user.</p>
+
+      {/* 
+      when we list the giftees, we will link to the Gftee page for each like this: 
+      
+      <a href="/giftee/:id-of-the-giftee">Name of Giftee</a>
+      
+      
+      */}
+    </>
+
   )
 }
