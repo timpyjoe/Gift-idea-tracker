@@ -4,7 +4,11 @@ export default function Header() {
 
 
   return (
-    <header>
+    <header
+      style={{
+        display: 'inline-block'
+
+      }}>
 
       <Navbar />
     </header>

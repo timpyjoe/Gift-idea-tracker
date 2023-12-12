@@ -4,13 +4,16 @@ import Button from 'react-bootstrap/Button';
 
 
 
+
 export default function HomePage() {
 
+  // const navigate = useNavigate()
+  // const handleClick = () => {
+  //   console.log("hello, world");
+  //   navigate("/authpage")
+  // };
 
   return (
-
-
-
     <main
       className="main"
       style={{
@@ -23,31 +26,12 @@ export default function HomePage() {
       }}
     >
 
-      <div className='nav-container' style={{
-        display: 'flex',
-        borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
-        alignItems: "end", paddingTop: "50px"
-      }}>
-        <h1>gifty.
-        </h1>
+      <Button as="a" href="http://localhost:5173/authpage">Create your gifty. Box</Button>
 
-
-      </div>
-
-
-
-
-
-      <Button
-        variant="danger"
-        style={{
-          fontSize: "45px",
-          fontFamily: "Young Serif",
-        }}>Create your gifty box</Button>
 
 
     </main >
 
 
-  );
+  )
 }
