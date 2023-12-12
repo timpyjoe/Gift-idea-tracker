@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react';
-import './App.css';
+
 
 const formReducer = (state, event) => {
   return {
@@ -54,9 +54,9 @@ function GiftIdeas() {
       </form>
     </div>
   )
+};
 
-
-  export default GiftIdeas;
+export default GiftIdeas;
 
 // Save the file.When you do the page will refresh and you’ll be able to enter data.
 
