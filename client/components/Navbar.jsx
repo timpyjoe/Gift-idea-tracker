@@ -15,7 +15,7 @@ function Navbar() {
           Home
         </Link>,
         <Link key={2} className="nav-link text-light" to="/authpage">
-          Sign in
+          Login
         </Link>,
         <Link key={3} className="nav-link text-light" to="/authpage">
           Sign up
