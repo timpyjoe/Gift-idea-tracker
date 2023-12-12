@@ -1,14 +1,15 @@
 import { useEffect } from "react"
 import Cookie from "js-cookie"
+import './stylePage.css'
 
 
-export default function Logout(){
-  
+export default function Logout() {
+
 
   useEffect(() => {
     Cookie.remove("auth-cookie")
-    window.location.href="/"
-  },[])
+    window.location.href = "/"
+  }, [])
 
   return (
     <>

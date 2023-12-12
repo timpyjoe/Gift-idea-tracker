@@ -1,6 +1,6 @@
 // import { useState, useEffect } from "react"
 import Auth from "../components/Auth"
-
+import "./stylePage.css"
 export default function AuthPage() {
 
 
