@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom"
 // import Giftee from "../../server/models/Giftee";
 import Container from "../../server/models/User"
-import User from "../../server/models/User"
+// import User from "../../server/models/User"
 // import Card from 'react-bootstrap/Card';
 // import CardGroup from 'react-bootstrap/CardGroup';
 import React from 'react'

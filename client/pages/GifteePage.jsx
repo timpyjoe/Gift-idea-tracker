@@ -33,8 +33,7 @@ export default function GifteePage() {
     getGifteeInfo()
   }, [])
 
-  if (!currentGifteeInfo) return res.json('error');
-  <></>
+  if (!currentGifteeInfo) return <></>
 
   // divide your main section into two different <section> elements
   // one is the about and likes, the other is the giftee's list of gifts.
@@ -42,7 +41,7 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
-      <section>
+      <section className="about-giftee">
         <h2 className="about-likes-container">About and Likes</h2>
         <p>Name: {currentGifteeInfo.name}
           Birthday: {currentGifteeInfo.birthday}
@@ -77,68 +76,17 @@ export default function GifteePage() {
         </p>
 
       </section>
-      <section>
-        <h2>Gift Ideas:</h2>
-
-        class NameForm extends React.Component {
-          constructor(props) {
-          super(props);
-        this.state = {value: ''};
-
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-        handleChange(event) {
-          this.setState({ value: event.target.value });
-  }
-
-        handleSubmit(event) {
-          alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-  }
-
-        render() {
-    return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name:
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-        );
-  }
-}
-
+      <section className="gift-ideas">
+        <GiftIdeas />
       </section>
 
-    </main >
+      <section className="link-ideas">
+        <h6>Click here for more gifty. ideas!</h6>
+        <a href="https://pinterest.com" target="_blank"></a>
+        <a href="https://target.com" target="_blank"></a>
+        <a href="https://amazon.com" target="_blank"></a>
+      </section>
+
+    </main>
   )
 }
-return (
-  <main><h1 className="title">gifty.</h1>
-    <h2 className="Welcome">Welcome to your gifty. box! </h2>
-
-
-    <div className="container-box">
-      <div className="giftee-list">
-        <Button className="create-giftee" variant="danger">Create New Giftee</Button>
-        <h2>Giftees:</h2>
-        <li>{{ name= giftee.name.value }}
-          <a href="/giftee/{{.id}}"></a></li>
-        <li>giftee 2</li>
-        <li>giftee 3</li>
-        <li>giftee 4</li>
-
-      </div>
-    </div>
-    <section>
-      <h6>Click here for more gifty. ideas!</h6>
-      <a href="https://pinterest.com" target="_blank"></a>
-      <a href="https://target.com" target="_blank"></a>
-      <a href="https://amazon.com" target="_blank"></a>
-    </section>
-  </main>
-)
-

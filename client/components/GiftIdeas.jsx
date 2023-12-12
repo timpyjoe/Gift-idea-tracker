@@ -8,7 +8,7 @@ const formReducer = (state, event) => {
   }
 }
 
-function giftIdeas() {
+function GiftIdeas() {
   const [formData, setFormData] = useReducer(formReducer, {});
   const [submitting, setSubmitting] = useState(false);
 
@@ -26,29 +26,40 @@ function giftIdeas() {
   }
 
   return (
+
+
     <div className="wrapper">
-      <h1>Gift Ideas</h1>
+      <h1>Gift Ideas:</h1>
       {submitting &&
-        <div>Submtting Ideas...</div>
+        <div>
+          <ul>
+            {Object.entries(formData).map(([name, value]) => (
+              <li key={name}><strong>{name}</strong>:{value.toString()}</li>
+            ))}
+          </ul>
+        </div>
       }
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label>
-            <p>Name</p>
+            <p>Gift Ideas:</p>
             <input name="name" onChange={handleChange} />
           </label>
+          <label>
+            <p>Description:</p>
+            <input type="textarea" name="value" onChange={handleChange} />
+          </label>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit">Enter Gift Idea</button>
       </form>
     </div>
   )
-}
 
-export default App;
-Save the file.When you do the page will refresh and you’ll be able to enter data.
 
-Now that you are collecting the form state, update the user display message to show the data in an unordered list(<ul>) element.
+  export default GiftIdeas;
 
-  Convert the data to an array using Object.entries, then map over the data converting each member of the array to an <li> element with the name and the value. Be sure to use the name as the key prop for the element:
+// Save the file.When you do the page will refresh and you’ll be able to enter data.
 
-    form-tutorial/src/components/App/App.js
+// Now that you are collecting the form state, update the user display message to show the data in an unordered list(<ul>) element.
+
+//   Convert the data to an array using Object.entries, then map over the data converting each member of the array to an <li> element with the name and the value. Be sure to use the name as the key prop for the element: //
