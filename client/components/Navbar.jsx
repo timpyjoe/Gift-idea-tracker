@@ -8,23 +8,25 @@ function Navbar() {
 
 
   return (
+    <>
 
-    <Nav
+    <Nav 
       links={[
         <Link key={1} className="nav-link text-light" to="/">
           Home
         </Link>,
-        <Link key={2} className="nav-link text-light" to="/authpage">
-          Sign in
-        </Link>,
-        <Link key={3} className="nav-link text-light" to="/authpage">
-          Sign up
-        </Link>
+          <Link key={2} className="nav-link text-light" to="/authpage">
+            Sign in
+          </Link>,
+          <Link key={3} className="nav-link text-light" to="/authpage">
+            Sign up
+          </Link>
+        
 
       ]}
     />
 
-
+</>
 
   )
 };
