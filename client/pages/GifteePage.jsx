@@ -1,7 +1,7 @@
 import { createRoutesFromChildren, useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
-
+import GiftIdeas from "../components/GiftIdeas"
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
 // import { CardGroup } from "react-bootstrap";

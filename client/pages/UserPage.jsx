@@ -2,18 +2,18 @@ import { useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom"
 // import Giftee from "../../server/models/Giftee";
-import Container from "../../server/models/User"
+// import Container from "../../server/models/User"
 // import User from "../../server/models/User"
 // import Card from 'react-bootstrap/Card';
 // import CardGroup from 'react-bootstrap/CardGroup';
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import router from "../../server/routes/api/user.routes";
+// import router from "../../server/routes/api/userroutes";
 
 import "./stylePage.css"
 
 
-export default function User() {
+export default function UserPage() {
   const [user, setUser] = useState({});
   const { id } = useParams();
 
@@ -29,7 +29,7 @@ export default function User() {
     <>
       <Container>
         {/* Conditionally render the full profile or a Loading string, depending on whether user data is available */}
-        {user.name ? <Profile user={user} /> : <p>Loading...</p>}
+        {user.name ? <User user={user} /> : <p>Loading...</p>}
       </Container>
 
 
@@ -65,12 +65,11 @@ export default function User() {
       </footer>
     </>
 
-
-
-    // when we list the giftees, we will link to the Gftee page for each like this: 
-
-
-
-
   )
 }
+
+// when we list the giftees, we will link to the Gftee page for each like this: 
+
+
+
+
