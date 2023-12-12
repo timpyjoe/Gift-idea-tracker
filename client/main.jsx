@@ -12,6 +12,8 @@ import Logout from "./pages/Logout.jsx";
 import User from "./pages/User.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import GifteePage from './pages/GifteePage.jsx';
+import { LogoutPage } from './pages/index.js';
+import UserPage from '../../../../homework/Gift-idea-tracker/client/pages/UserPage.jsx';
 
 
 
@@ -33,14 +35,14 @@ const router = createBrowserRouter([
 
       {
         path: 'user',
-        element: <User />,
+        element: <UserPage />,
       },
       {
         path: 'logout',
-        element: <Logout />
+        element: <LogoutPage />
       },
       {
-        path: 'gifteepage',
+        path: 'giftee',
         element: <GifteePage />
       }
     ],
