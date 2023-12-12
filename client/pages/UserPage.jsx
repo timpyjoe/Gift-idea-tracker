@@ -7,10 +7,10 @@ import { useEffect, useState } from "react";
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 
-import "./style.css"
+import "./stylePage.css"
 
 
-export default function User() {
+export default function UserPage() {
 
   return (
 
@@ -22,7 +22,8 @@ export default function User() {
         <div className="giftee-list">
           <Button className="create-giftee" variant="danger">Create New Giftee</Button>
           <h2>Giftees:</h2>
-          <li>giftee 1</li>
+          <li>Name of Giftee
+            <a href="/giftee/:id"></a></li>
           <li>giftee 2</li>
           <li>giftee 3</li>
           <li>giftee 4</li>
@@ -37,18 +38,13 @@ export default function User() {
       </section>
     </main>
 
-    <>
-      <h1>Private Page</h1>
-      <p>This is an example of a page that would require an authenticated user.</p>
 
-      {/* 
-      when we list the giftees, we will link to the Gftee page for each like this: 
-      
-      <a href="/giftee/:id-of-the-giftee">Name of Giftee</a>
-      
-      
-      */}
-    </>
+
+
+    // when we list the giftees, we will link to the Gftee page for each like this: 
+
+
+
 
   )
 }

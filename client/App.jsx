@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppProvider from './utils/AppProvider';
 
 import { Header, ProtectedRoute, GifteeForm } from './components';
-import { HomePage, AuthPage, Logout, User, GifteePage } from './pages/index'
+import { HomePage, AuthPage, LogoutPage, UserPage, GifteePage } from './pages/index'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,14 +19,14 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/authpage" element={<AuthPage />} />
-          <Route path="/gifteepage/:id" element={<GifteePage />} />
+          <Route path="/giftee/:id" element={<GifteePage />} />
           <Route path="/user" element={
             <ProtectedRoute>
-              <User />
+              <UserPage />
             </ProtectedRoute>
           } />
 
-          <Route path="/logout" element={<Logout />} />
+          <Route path="/logout" element={<LogoutPage />} />
         </Routes>
       </div>
 

@@ -8,8 +8,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import HomePage from "./pages/HomePage.jsx";
 import AuthPage from "./pages/AuthPage.jsx";
-import Logout from "./pages/Logout.jsx";
-import User from "./pages/User.jsx";
+import LogoutPage from "./pages/LogoutPage.jsx";
+import UserPage from "./pages/UserPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import GifteePage from './pages/GifteePage.jsx';
 
@@ -33,14 +33,14 @@ const router = createBrowserRouter([
 
       {
         path: 'user',
-        element: <User />,
+        element: <UserPage />,
       },
       {
         path: 'logout',
-        element: <Logout />
+        element: <LogoutPage />
       },
       {
-        path: 'gifteepage',
+        path: 'giftee',
         element: <GifteePage />
       }
     ],
