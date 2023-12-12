@@ -22,7 +22,7 @@ export default function HomePage() {
       }}
     >
 
-      <Button as="a" href="http://localhost:5173/authpage">Create your gifty. box</Button>
+      <Button as="a" href="/authpage">Create your gifty. box</Button>
 
 
 

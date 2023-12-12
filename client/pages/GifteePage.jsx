@@ -11,17 +11,16 @@ import "./stylePage.css"
 
 
 export default function GifteePage() {
-
-  // this is the id of the giftee
-  const { id } = useParams()
-
-
   // Make a fetch request for the data related to this giftee based on their id
   const [currentGifteeInfo, setCurrentGifteeInfo] = useState(null)
 
+  // this is the id of the giftee
+  const { id } = useParams()
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
-    await fetch("/api/giftee/:id")  // not sure if this is correct
+    const { data } = await fetch("/api/giftee/:id");// not sure if this is correct
+
+    setCurrentGifteeInfo(data);
     // what are you going to do once you have the giftee's information
     // that you fetched from the backend?
     // well, you want to store it in state, the currentGifteeInfo state variable
@@ -34,7 +33,8 @@ export default function GifteePage() {
     getGifteeInfo()
   }, [])
 
-  if (!currentGifteeInfo) return <></>
+  if (!currentGifteeInfo) return res.json('error');
+  <></>
 
   // divide your main section into two different <section> elements
   // one is the about and likes, the other is the giftee's list of gifts.
@@ -42,44 +42,76 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
+      <section>
+        <h2 className="about-likes-container">About and Likes</h2>
+        <p>Name: {currentGifteeInfo.name}
+          Birthday: {currentGifteeInfo.birthday}
+          {/* Gifter: {currentGifteeInfo.gifter} */}
+          Relationship: {currentGifteeInfo.relationship}
+          {/* // how to figure out favorites// */}
+          Colors: {currentGifteeInfo.colors}
+          {/* Music: {currentGifteeInfo.music} */}
+          Flowers: {currentGifteeInfo.flowers}
+          {/* Clothes: {currentGifteeInfo} */}
+          {/* Food and Snacks: {currentGifteeInfo.foodSnacks} */}
+          Candy: {currentGifteeInfo.candy}
+          {/* Coffee or Tea: {currentGifteeInfo.coffeetea} */}
+          {/* Stores: {currentGifteeInfo.stores} */}
+          {/* Beverages: {currentGifteeInfo.beverages} */}
+          {/* Movies: {currentGifteeInfo.movies} */}
+          {/* Shows: {currentGifteeInfo.shows} */}
+          {/* Scents: {currentGifteeInfo.scents} */}
+          {/* Accessories: {currentGifteeInfo.accessories} */}
+          {/* Dessert: {currentGifteeInfo.dessert} */}
+          Sports: {currentGifteeInfo.sports}
+          {/* // how to figure out sizes // */}
+          {/* Shirt or Top: {currentGifteeInfo.shirttop} */}
+          {/* Pants or Bottom: {currentGifteeInfo.pantsbottom} */}
+          {/* Dress: {currentGifteeInfo.dress} */}
+          {/* Shoe: {currentGifteeInfo.shoe} */}
+          {/* Ring: {currentGifteeInfo.ring} */}
+          {/* Hobbies: {currentGifteeInfo.hobbies} */}
+          {/* Collections: {currentGifteeInfo.collections} */}
+          {/* Don't Need: {currentGifteeInfo.dontneed} */}
+          {/* Extra Ideas: {currentGifteeInfo.blank} */}
+        </p>
 
-      <h2 className="about-likes-container">About and Likes</h2>
-      <p>Name: {currentGifteeInfo.name}
-        Birthday: {currentGifteeInfo.birthday}
-        Gifter: {currentGifteeInfo.gifter}
-        Relationship: {currentGifteeInfo.relationship}
-          // how to figure out favorites//
-        Colors: {currentGifteeInfo.colors}
-        Music: {currentGifteeInfo.music}
-        Flowers: {currentGifteeInfo.flowers}
-        Clothes: {currentGifteeInfo}
-        Food and Snacks: {currentGifteeInfo.foodSnacks}
-        Candy: {currentGifteeInfo.candy}
-        Coffee or Tea: {currentGifteeInfo.coffeetea}
-        Stores: {currentGifteeInfo.stores}
-        Beverages: {currentGifteeInfo.beverages}
-        Movies: {currentGifteeInfo.movies}
-        Shows: {currentGifteeInfo.shows}
-        Scents: {currentGifteeInfo.scents}
-        Accessories: {currentGifteeInfo.accessories}
-        Dessert: {currentGifteeInfo.dessert}
-        Sports: {currentGifteeInfo.sports}
-          // how to figure out sizes //
-        Shirt or Top: {currentGifteeInfo.shirttop}
-        Pants or Bottom: {currentGifteeInfo.pantsbottom}
-        Dress: {currentGifteeInfo.dress}
-        Shoe: {currentGifteeInfo.shoe}
-        Ring: {currentGifteeInfo.ring}
-        Hobbies: {currentGifteeInfo.hobbies}
-        Collections: {currentGifteeInfo.collections}
-        Don't Need: {currentGifteeInfo.dontneed}
-        Extra Ideas: {currentGifteeInfo.blank}
+      </section>
+      <section>
+        <h2>Gift Ideas:</h2>
 
+        class NameForm extends React.Component {
+          constructor(props) {
+          super(props);
+        this.state = {value: ''};
 
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-      </p>
+        handleChange(event) {
+          this.setState({ value: event.target.value });
+  }
 
+        handleSubmit(event) {
+          alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+  }
 
+        render() {
+    return (
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        );
+  }
+}
+
+      </section>
 
     </main >
   )
