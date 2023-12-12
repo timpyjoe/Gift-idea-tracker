@@ -70,7 +70,7 @@ export default function CreateGiftee() {
       dontneed: "",
       blank: ""
     });
-    navigate("/");
+    navigate("/giftee");
   }
 
   // This following section will display the form that takes the input from the user.
@@ -176,7 +176,7 @@ export default function CreateGiftee() {
             </Col>
           </Col>
         </Row>
-        <Button variant="danger">Submit</Button>{'Submit'}
+        <Button variant="danger" onClick={onSubmit}>Submit</Button>{'Submit'}
       </Form>
     </div>
   )

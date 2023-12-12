@@ -7,11 +7,7 @@ import Button from 'react-bootstrap/Button';
 
 export default function HomePage() {
 
-  // const navigate = useNavigate()
-  // const handleClick = () => {
-  //   console.log("hello, world");
-  //   navigate("/authpage")
-  // };
+
 
   return (
     <main
@@ -26,7 +22,7 @@ export default function HomePage() {
       }}
     >
 
-      <Button as="a" href="http://localhost:5173/authpage">Create your gifty. Box</Button>
+      <Button as="a" href="http://localhost:5173/authpage">Create your gifty. box</Button>
 
 
 
