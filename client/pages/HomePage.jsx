@@ -23,10 +23,10 @@ export default function HomePage() {
       }}
     >
 
-      <div className='main-container' style={{
+      <div className='nav-container' style={{
         display: 'flex',
         borderRadius: "20px", position: 'absolute', top: 0, width: '100%', display: "flex", justifyContent: "center",
-        alignItems: "center", paddingTop: "50px"
+        alignItems: "end", paddingTop: "50px"
       }}>
         <h1>gifty.
         </h1>

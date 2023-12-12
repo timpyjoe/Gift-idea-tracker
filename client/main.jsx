@@ -13,7 +13,6 @@ import UserPage from "./pages/UserPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import GifteePage from './pages/GifteePage.jsx';
 // import { LogoutPage } from './pages/index.js';
-// import UserPage from '../../../../homework/Gift-idea-tracker/client/pages/UserPage.jsx';
 
 
 
