@@ -20,16 +20,16 @@ import "./stylePage.css"
 
 
 export default function UserPage() {
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const { id } = useParams();
 
-  const fetchData = async () => {
-    const { data } = await router.getUserById(id);
-    setUser(data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // const fetchData = async () => {
+  //   const { data } = await router.getUserById(id);
+  //   setUser(data);
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   const { user } = useAppCtx()
   console.log(user._id)
@@ -78,14 +78,14 @@ export default function UserPage() {
   if( !user._id, !giftees ) return <></>
   return (
     <>
-      <Container>
-        {/* Conditionally render the full profile or a Loading string, depending on whether user data is available */}
+      {/* <Container>
+        {/* Conditionally render the full profile or a Loading string, depending on whether user data is available 
         {user.name ? <User user={user} /> : <p>Loading...</p>}
-      </Container>
+      </Container> */}
 
 
 
-
+    
       <div className="container-box">
         <div className="giftee-list">
           <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
@@ -113,12 +113,12 @@ export default function UserPage() {
             <Link to="/giftee/add">
               <Button className="create-giftee" size="lg" variant="danger">Create New Giftee</Button> </Link>
 
-            <h2>Giftees:</h2>
+            {/* <h2>Giftees:</h2>
             <li>Name of Giftee
               <a href="/giftee/:id"></a></li>
             <li>giftee 2</li>
             <li>giftee 3</li>
-            <li>giftee 4</li>
+            <li>giftee 4</li> */}
 
           </div>
         </div>
@@ -128,7 +128,9 @@ export default function UserPage() {
           <a href="https://target.com" target="_blank"></a>
           <a href="https://amazon.com" target="_blank"></a>
         </section>
-      </main>
+        </div>
+        </div>
+      
       <footer className="profile-footer">
         {/* Link the user back to the homepage. The to prop is used in place of an href */}
         <Link to="/">← Go Back</Link>
