@@ -1,10 +1,14 @@
 import { createRoutesFromChildren, useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom"
 import GiftIdeas from "../components/GiftIdeas"
+
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
 // import { CardGroup } from "react-bootstrap";
+
+import Button from 'react-bootstrap/Button';
 
 import { useParams } from "react-router-dom";
 import "./stylePage.css"
@@ -33,7 +37,9 @@ export default function GifteePage() {
     getGifteeInfo()
   }, [])
 
+
   if (!currentGifteeInfo) return <></>
+
 
   // divide your main section into two different <section> elements
   // one is the about and likes, the other is the giftee's list of gifts.
