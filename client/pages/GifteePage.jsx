@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom"
 import GiftIdeas from "../components/GiftIdeas"
+import GifteeInfo from "../components/GifteeInfo";
 
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
@@ -52,41 +53,8 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
-      <section className="about-giftee">
-        <h2 className="about-likes-container">About and Likes</h2>
-        <p>Name: {currentGifteeInfo.name}
-          Birthday: {currentGifteeInfo.birthday}
-          {/* Gifter: {currentGifteeInfo.gifter} */}
-          Relationship: {currentGifteeInfo.relationship}
-          {/* // how to figure out favorites// */}
-          Colors: {currentGifteeInfo.favorites.colors}
-          {/* Music: {currentGifteeInfo.music} */}
-          Flowers: {currentGifteeInfo.favorites.flowers}
-          {/* Clothes: {currentGifteeInfo} */}
-          {/* Food and Snacks: {currentGifteeInfo.foodSnacks} */}
-          Candy: {currentGifteeInfo.favorites.candy}
-          {/* Coffee or Tea: {currentGifteeInfo.coffeetea} */}
-          {/* Stores: {currentGifteeInfo.stores} */}
-          {/* Beverages: {currentGifteeInfo.beverages} */}
-          {/* Movies: {currentGifteeInfo.movies} */}
-          {/* Shows: {currentGifteeInfo.shows} */}
-          {/* Scents: {currentGifteeInfo.scents} */}
-          {/* Accessories: {currentGifteeInfo.accessories} */}
-          {/* Dessert: {currentGifteeInfo.dessert} */}
-          Sports: {currentGifteeInfo.favorites.sports}
-          {/* // how to figure out sizes // */}
-          {/* Shirt or Top: {currentGifteeInfo.shirttop} */}
-          {/* Pants or Bottom: {currentGifteeInfo.pantsbottom} */}
-          {/* Dress: {currentGifteeInfo.dress} */}
-          {/* Shoe: {currentGifteeInfo.shoe} */}
-          {/* Ring: {currentGifteeInfo.ring} */}
-          {/* Hobbies: {currentGifteeInfo.hobbies} */}
-          {/* Collections: {currentGifteeInfo.collections} */}
-          {/* Don't Need: {currentGifteeInfo.dontneed} */}
-          {/* Extra Ideas: {currentGifteeInfo.blank} */}
-        </p>
-
-      </section>
+      <GifteeInfo currentGifteeInfo={currentGifteeInfo}/>
+      
       <section className="gift-ideas">
         <GiftIdeas />
       </section>

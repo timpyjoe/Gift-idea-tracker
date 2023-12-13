@@ -29,6 +29,8 @@ async function authenticate(data){
     throw new Error(err)
   }
 
+  console.log(user)
+
   if(!user) throw new Error("No user found")
 
   let userIsOk = false
@@ -38,6 +40,8 @@ async function authenticate(data){
     console.log(err)
     throw new Error(err)
   }
+
+  console.log(userIsOk)
 
   if(!userIsOk) throw new Error("Could not login")
   return user;

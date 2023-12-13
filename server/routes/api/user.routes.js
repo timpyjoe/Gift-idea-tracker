@@ -75,7 +75,7 @@ router.post("/", async (req, res) => {
   }
 })
 
-router.post("/authpage", async (req, res) => {
+router.post("/auth", async (req, res) => {
   try {
     const user = await authenticate(req.body)
     const token = createToken(user.email, user._id)
