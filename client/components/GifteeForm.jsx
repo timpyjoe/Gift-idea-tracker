@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row';
 
 import Button from 'react-bootstrap/Button';
 
-export default function CreateGiftee() {
+export default function UpdateGiftee() {
 
   const { user } = useAppCtx()
   const [form, setForm ] = useState({})

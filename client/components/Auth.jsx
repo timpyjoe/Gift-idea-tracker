@@ -12,10 +12,10 @@ export default function Auth({ usage = "signup" }) {
     setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
-  async function handleFormSubmit(e) {
+  async function handleFormSubmit(e){
     e.preventDefault()
-    const apiPath = (usage === "signup") ? "/" : "/user/:id" // Should this be user?
-    const finalPath = `/api/user${apiPath}` // does this need to change?
+    const apiPath = (usage === "signup") ? "/" : `/auth`
+    const finalPath = `/api/user${apiPath}`
 
     try {
       const query = await fetch(finalPath, {
@@ -27,16 +27,10 @@ export default function Auth({ usage = "signup" }) {
       })
       const response = await query.json()
       console.log(response)
-
-      // the user object we get back should have an array of giftees
-
-
-      if (response.result === "success") {
-
-        window.location.href = "/user"
-
+      if( response.result === "success" ){
+        window.location.href = "/"
       }
-    } catch (err) {
+    } catch(err){
       console.log(err.message)
     }
   }
