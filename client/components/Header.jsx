@@ -18,7 +18,9 @@ export default function Header() {
             <Nav className="text-light nav-contained">
               <Navbar.Brand className="text-danger" style={{ fontSize: "48px" }}>g</Navbar.Brand>
               <Link className="homeClass" to="/">Homepage</Link>
-              <Link className="gifteeClass" to="/user">Giftees</Link>
+
+              <Link className="gifteeClass" to="/user">Profile</Link>
+
               <Link className="loginClass" to="/authpage">Login</Link>
               <Link className="logoutClass" to="/logout">Logout</Link>
             </Nav>

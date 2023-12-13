@@ -18,6 +18,17 @@ export default function HomePage() {
 
       }}
     >
+
+
+      <Button className='create-btn btn-' variant="outline-light" as="a" href="/authpage">Create your gifty. box</Button>
+
+
+
+    </main >
+
+
+  )
+
       <div
         style={{
           position: "absolute",
@@ -37,4 +48,5 @@ export default function HomePage() {
       </div>
     </main>
   );
+
 }
