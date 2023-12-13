@@ -20,11 +20,11 @@ export default function HomePage() {
       <div
         style={{
           position: "absolute",
-          top: "60%",
+          top: "100%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          height: '200px',
-          width: '200px'
+          height: '300px',
+          width: '300px'
         }}
       >
         <Lottie animationData={Animation1} loop={true} />
