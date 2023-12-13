@@ -14,8 +14,8 @@ export default function Auth({ usage = "signup" }) {
 
   async function handleFormSubmit(e) {
     e.preventDefault()
-    const apiPath = (usage === "signup") ? "/" : "/authpage"
-    const finalPath = `/api/user${apiPath}`
+    const apiPath = (usage === "signup") ? "/" : "/user/:id" // Should this be user?
+    const finalPath = `/api/user${apiPath}` // does this need to change?
 
     try {
       const query = await fetch(finalPath, {
@@ -32,7 +32,9 @@ export default function Auth({ usage = "signup" }) {
 
 
       if (response.result === "success") {
+
         window.location.href = "/user"
+
       }
     } catch (err) {
       console.log(err.message)
@@ -61,7 +63,7 @@ export default function Auth({ usage = "signup" }) {
             </div>
           </div>
 
-          <button className="mt-2">Submit Info</button>
+          <button className="mt-2" as="a" href="https://localhost:5173/user/:id">Submit Info</button>
         </div>
       </form>
     </div>

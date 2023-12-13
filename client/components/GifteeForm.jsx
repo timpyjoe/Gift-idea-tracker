@@ -76,7 +76,9 @@ export default function CreateGiftee() {
       dontneed: "",
       blank: ""
     });
-    // navigate("/");
+
+    navigate("/giftee");
+
   }
 
   // This following section will display the form that takes the input from the user.
@@ -186,7 +188,9 @@ export default function CreateGiftee() {
             </Col>
           </Col>
         </Row>
+
         <Button variant="danger" type="submit">Submit</Button>
+
       </Form>
     </div>
   )
