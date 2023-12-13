@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import GiftIdeas from "../components/GiftIdeas"
 import GifteeInfo from "../components/GifteeInfo";
+import UpdateGiftee from "../components/GifteeForm";
 
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
@@ -54,6 +55,7 @@ export default function GifteePage() {
       className="main-container"
     >
       <GifteeInfo currentGifteeInfo={currentGifteeInfo}/>
+      <UpdateGiftee currentGifteeInfo={currentGifteeInfo}/>
       
       <section className="gift-ideas">
         <GiftIdeas />
