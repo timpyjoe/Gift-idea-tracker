@@ -6,9 +6,12 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
+import Button from 'react-bootstrap/Button';
+
 export default function CreateGiftee() {
 
-
+  const { user } = useAppCtx()
+  const [form, setForm ] = useState({})
 
   // These methods will update the state properties.
   function updateForm(value) {
@@ -18,20 +21,21 @@ export default function CreateGiftee() {
   }
 
   // This function will handle the submission.
-  async function onSubmit(e) {
+  async function onSubmit(e, userId) {
     e.preventDefault();
+    console.log(userId)
 
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newGiftee = { ...form };
 
-    await fetch("http://localhost:30001/giftee/add", {
+    await fetch("/api/giftee/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(newGiftee),
+      body: JSON.stringify(form),
     })
-      .then
+      .then (console.log("submitted!"))
       .catch(error => {
         window.alert(error);
         return;
@@ -40,55 +44,61 @@ export default function CreateGiftee() {
     setForm({
       name: "",
       birthday: "",
-      gifter: "",
+      gifter: userId,
       relationship: "",
       tops: "",
       bottoms: "",
-      favorites: "", // how to link favorites to the following--
-      colors: "",
-      flowers: "",
-      clothes: "",
-      foodSnacks: "",
-      candy: "",
-      coffeetea: "",
-      stores: "",
-      beverages: "",
-      movies: "",
-      shows: "",
-      scents: "",
-      accessories: "",
-      dessert: "",
-      sports: "",
-      sizes: "", // how to link sizes to clothes--
-      shirttop: "",
-      pantsbottom: "",
-      dress: "",
-      shoe: "",
-      ring: "",
+      favorites: { 
+        colors: "",
+        flowers: "",
+        clothes: "",
+        foodSnacks: "",
+        candy: "",
+        coffeetea: "",
+        stores: "",
+        beverages: "",
+        movies: "",
+        shows: "",
+        scents: "",
+        accessories: "",
+        dessert: "",
+        sports: "",
+      },
+      sizes: {
+        shirttop: "",
+        pantsbottom: "",
+        dress: "",
+        shoe: "",
+        ring: "",
+      }, // how to link sizes to clothes--
       hobbies: "",
       collections: "",
       dontneed: "",
       blank: ""
     });
-    navigate("/");
+    // navigate("/");
   }
 
   // This following section will display the form that takes the input from the user.
+
+
+
+  if( !user._id ) return <></>
   return (
     <div>
       <h3>Create a New Giftee!</h3>
 
-      <Form>
+      <Form onSubmit={(e) => onSubmit(e, user._id)}>
         <Row>
           <Col>
             <Form.Control placeholder="Giftee name" />
           </Col>
           <Col>
-            <Form.Control placeholder="Birthday" />
+            <Form.Control placeholder="Birthday" type="date" />
           </Col>
-          <Col>
+          {/* <Col>
             <Form.Control placeholder="Gifter" />
-          </Col>
+          </Col> */}
           <Col>
             <Form.Control placeholder="Relation/relationship" />
           </Col>
@@ -176,7 +186,7 @@ export default function CreateGiftee() {
             </Col>
           </Col>
         </Row>
-        <Button variant="danger">Submit</Button>{'Submit'}
+        <Button variant="danger" type="submit">Submit</Button>
       </Form>
     </div>
   )

@@ -32,7 +32,7 @@ export default function Auth({ usage = "signup" }) {
 
 
       if (response.result === "success") {
-        window.location.href = "/"
+        window.location.href = "/user"
       }
     } catch (err) {
       console.log(err.message)

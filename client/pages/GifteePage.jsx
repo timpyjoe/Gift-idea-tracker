@@ -2,9 +2,13 @@ import { createRoutesFromChildren, useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
 // import { useParams, Link } from "react-router-dom"
 
+import CreateGiftee from "../components/GifteeForm";
+
 // import Giftee from "../../server/models/Giftee";
 import { Card } from 'react-bootstrap';
 import { CardGroup } from "react-bootstrap";
+
+import Button from 'react-bootstrap/Button';
 
 import { useParams } from "react-router-dom";
 import "./stylePage.css"
@@ -19,13 +23,15 @@ export default function GifteePage() {
 
       <div className="container-box">
         <div className="giftee-list">
-          <Button className="create-giftee" variant="danger">Create New Giftee</Button>
+
+          <CreateGiftee />
+          {/* <Button className="create-giftee" variant="danger">Create New Giftee</Button>
           <h2>Giftees:</h2>
           <li>Name of Giftee
             <a href="/giftee/:id"></a></li>
           <li>giftee 2</li>
           <li>giftee 3</li>
-          <li>giftee 4</li>
+          <li>giftee 4</li> */}
 
         </div>
       </div>
