@@ -4,6 +4,7 @@ const gifteeSchema = new Schema({
   name: {
     type: String,
     required: true,
+    default: "placeholder"
   },
   birthday: {
     type: Date,
