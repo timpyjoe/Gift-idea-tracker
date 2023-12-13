@@ -128,6 +128,8 @@ export default function UserPage() {
           <a href="https://target.com" target="_blank"></a>
           <a href="https://amazon.com" target="_blank"></a>
         </section>
+        </div>
+      </div>
       </main>
       <footer className="profile-footer">
         {/* Link the user back to the homepage. The to prop is used in place of an href */}
