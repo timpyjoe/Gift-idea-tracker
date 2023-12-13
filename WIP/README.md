@@ -4,20 +4,19 @@
 A user friendly app to create a "gifty box" that holds friends, family members, co-workers etc. and gift lists/ideas for them. 
 
 ## Table of Contents
--[Description](#Description)
--[Tech Featured](#tech)
--[gifty Screenshots](#gs)
--[Website Links](#websitelinks)
--[Credits](#credits)
+* [Description](#description)
+* [Usage](#usage)
+* [Tech Featured](#tech)
+* [Preview](#preview)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
 ## Usage
 Access the web application here: [Heroku URL](https://gifty-gift-idea-tracker-9346ec5c500d.herokuapp.com/)
 
 Upon arriving to the web application, the user is presented with the login in screen. Here they can either login or signup and will be redirected to access restricted pages.
 
-Here the user is presented with information that they can also interact with
-
-...
+The user is then presented with information that they can interact with..
 
 ## Tech Featured
 - An Express back end with [MongoDB](https://www.mongodb.com/) & [Mongoose](https://mongoosejs.com/docs/) database.
@@ -28,13 +27,9 @@ Here the user is presented with information that they can also interact with
 - [Canva](https://www.canva.com/) wireframing to start with a mock up of the pages that will create gifty. 
 - [Heroku](https://www.heroku.com/) to deploy the app when completed.
 
-## Preview (Early Concept)
+## Preview (mock homepage)
 
 ![screenshot](https://i.imgur.com/9o0ZoE5.png)
-
-![screenshot](./.png)
-
-![screenshot](./.png)
 
 ## Deployment
 
@@ -42,14 +37,10 @@ Here the user is presented with information that they can also interact with
 
 [Heroku](https://gifty-gift-idea-tracker-9346ec5c500d.herokuapp.com/) 
 
-## Credits & Contributors
+## Credits
 The following people contributed to this web applciation. Click on their name to go to their github page
 
-*All are full time students attending the University of Minnesota Bootcamp.*
-
-
 * Project Manager - [Holly Thompson](https://github.com/thompsonholly)
-* [Tim Poffenberger]()
-* Sean Sutter
-* Merial Cabellero 
-* Franklin Bradley
+* Project Team - [Tim Poffenberger](https://github.com/timpyjoe), [Sean Sutter](https://github.com/seanwsutter), [Merial Cabellero](https://github.com/Tagapili), [Franklin Bradley](https://github.com/FranklinBrad)
+
+*All are full time students attending the University of Minnesota Bootcamp.*
