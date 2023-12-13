@@ -1,0 +1,42 @@
+.homeClass {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.gifteeClass {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.loginClass {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.logoutClass {
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.nav-link-container {
+  justify-content: center;
+}
+
+.nav-contained {
+  align-items: center;
+}
+
+/* .img {
+  height: 100vh;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://i.imgur.com/3ocYD4J.png);
+  background-size: cover;
+
+} */
