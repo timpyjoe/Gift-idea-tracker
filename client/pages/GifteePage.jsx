@@ -22,9 +22,14 @@ export default function GifteePage() {
   const { id } = useParams()
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
-    const { data } = await fetch("/api/giftee/:id");// not sure if this is correct
+    const  data  = await fetch(`/api/giftee/${id}`)// not sure if this is correct
+    .then(function(response){
+      return response.json()
+    }).then(function(data){
 
-    setCurrentGifteeInfo(data);
+      setCurrentGifteeInfo(data.payload);
+      console.log(data)
+    })
     // what are you going to do once you have the giftee's information
     // that you fetched from the backend?
     // well, you want to store it in state, the currentGifteeInfo state variable
@@ -54,12 +59,12 @@ export default function GifteePage() {
           {/* Gifter: {currentGifteeInfo.gifter} */}
           Relationship: {currentGifteeInfo.relationship}
           {/* // how to figure out favorites// */}
-          Colors: {currentGifteeInfo.colors}
+          Colors: {currentGifteeInfo.favorites.colors}
           {/* Music: {currentGifteeInfo.music} */}
-          Flowers: {currentGifteeInfo.flowers}
+          Flowers: {currentGifteeInfo.favorites.flowers}
           {/* Clothes: {currentGifteeInfo} */}
           {/* Food and Snacks: {currentGifteeInfo.foodSnacks} */}
-          Candy: {currentGifteeInfo.candy}
+          Candy: {currentGifteeInfo.favorites.candy}
           {/* Coffee or Tea: {currentGifteeInfo.coffeetea} */}
           {/* Stores: {currentGifteeInfo.stores} */}
           {/* Beverages: {currentGifteeInfo.beverages} */}
@@ -68,7 +73,7 @@ export default function GifteePage() {
           {/* Scents: {currentGifteeInfo.scents} */}
           {/* Accessories: {currentGifteeInfo.accessories} */}
           {/* Dessert: {currentGifteeInfo.dessert} */}
-          Sports: {currentGifteeInfo.sports}
+          Sports: {currentGifteeInfo.favorites.sports}
           {/* // how to figure out sizes // */}
           {/* Shirt or Top: {currentGifteeInfo.shirttop} */}
           {/* Pants or Bottom: {currentGifteeInfo.pantsbottom} */}

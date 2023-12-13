@@ -41,9 +41,14 @@ const router = createBrowserRouter([
         element: <LogoutPage />
       },
       {
+        path: 'giftee/:id',
+        element: <GifteePage />
+      },
+      {
         path: 'giftee',
         element: <GifteePage />
       }
+    
     ],
   },
 ]);
