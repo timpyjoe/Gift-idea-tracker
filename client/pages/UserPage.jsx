@@ -1,5 +1,7 @@
 import { useRouteError } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import Animation2 from "../assets/animations/animation2.json";
 
 
 import { useAppCtx } from "../utils/AppProvider";
@@ -129,6 +131,12 @@ export default function UserPage() {
           <a href="https://amazon.com" target="_blank"></a>
         </section>
         </div>
+      </div>
+     <div style={{
+      height: '400px',
+      width: '400px'
+     }}>
+      <Lottie animationData={Animation2} loop={true} />
       </div>
       {/* </main> */}
       <footer className="profile-footer">
