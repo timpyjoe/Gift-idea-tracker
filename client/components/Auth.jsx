@@ -12,7 +12,7 @@ export default function Auth({ usage = "signup" }) {
     setUserData({ ...userData, [e.target.name]: e.target.value })
   }
 
-  async function handleFormSubmit(e){
+  async function handleFormSubmit(e) {
     e.preventDefault()
     const apiPath = (usage === "signup") ? "/" : `/auth`
     const finalPath = `/api/user${apiPath}`
@@ -27,10 +27,10 @@ export default function Auth({ usage = "signup" }) {
       })
       const response = await query.json()
       console.log(response)
-      if( response.result === "success" ){
-        window.location.href = "/"
+      if (response.result === "success") {
+        window.location.href = "/user"
       }
-    } catch(err){
+    } catch (err) {
       console.log(err.message)
     }
   }
