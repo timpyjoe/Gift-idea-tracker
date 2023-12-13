@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router";
 import { useAppCtx } from "../utils/AppProvider";
@@ -11,30 +11,36 @@ import { Last } from "react-bootstrap/esm/PageItem";
 
 export default function UpdateGiftee({ currentGifteeInfo }) {
 
-  const { user } = useAppCtx()
+  // const { user } = useAppCtx()
   const [data, setData ] = useState(currentGifteeInfo)
 
-  // These methods will update the state properties.
-  function updateForm(value) {
-    return setData((prev) => {
-      return { ...prev, ...value };
-    });
+  // Updates the state when the "About Properties" are changed.
+  function handleInputChange(e){
+    setData({...data, [e.target.name]: e.target.value})
   }
-
+  // Updates the state when any of the "favorites" fields are changed.
+  function handleFavoritesChange(e){
+    setData({...data,  favorites: {
+      ...data.favorites, [e.target.name]:e.target.value}})
+  }
+  
+  function handleSizesChange(e){
+    setData({...data,  sizes: {
+      ...data.sizes, [e.target.name]:e.target.value}})
+  }
   // This function will handle the submission.
-  async function onSubmit(e, userId) {
+  function onSubmit(e) {
     e.preventDefault();
-    console.log(userId)
 
     // When a post request is sent to the create url, we'll add a new record to the database.
     // const newGiftee = { ...form };
 
-    await fetch(`/api/giftee/${data._id}`, {
+    const request = fetch(`/api/giftee/${data._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: data,
+      body: JSON.stringify(data),
     })
       .then (function(response) {
         return response.json()
@@ -42,173 +48,148 @@ export default function UpdateGiftee({ currentGifteeInfo }) {
         console.log(payload)
       })
       .catch(error => {
-        window.alert(error);
+        console.log(error);
         return;
       });
 
-    // setForm({
-    //   name: "",
-    //   birthday: "",
-    //   gifter: userId,
-    //   relationship: "",
-    //   tops: "",
-    //   bottoms: "",
-    //   favorites: { 
-    //     colors: "",
-    //     flowers: "",
-    //     clothes: "",
-    //     foodSnacks: "",
-    //     candy: "",
-    //     coffeetea: "",
-    //     stores: "",
-    //     beverages: "",
-    //     movies: "",
-    //     shows: "",
-    //     scents: "",
-    //     accessories: "",
-    //     dessert: "",
-    //     sports: "",
-    //   },
-    //   sizes: {
-    //     shirttop: "",
-    //     pantsbottom: "",
-    //     dress: "",
-    //     shoe: "",
-    //     ring: "",
-    //   }, // how to link sizes to clothes--
-    //   hobbies: "",
-    //   collections: "",
-    //   dontneed: "",
-    //   blank: ""
-    // });
-
-    // navigate("/giftee");
 
   }
+
+  // useEffect(() => {
+  //   console.log(data)
+  // }, [data])
 
   // This following section will display the form that takes the input from the user.
 
 
 
-  if( !user._id ) return <></>
+  // if( !user._id ) return <></>
   return (
     <div>
       <h3>Create a New Giftee!</h3>
 
-      <Form onSubmit={(e) => onSubmit(e, user._id)}>
+      <Form onSubmit={(e) => onSubmit(e)}>
         <Row>
           <Col>
             <Form.Label>Name</Form.Label>
-            <Form.Control placeholder="Giftee name" onChange={updateForm} />
+            <Form.Control  defaultValue={data.name} name="name" onChange={handleInputChange} />
           </Col>
           <Col>
             <Form.Label>Birthday</Form.Label>
-            <Form.Control placeholder="Birthday" type="date" />
+            <Form.Control name="birthday" placeholder="Birthday" type="date" onChange={handleInputChange} />
           </Col>
           <Col>
             <Form.Label>Relationship</Form.Label>
-            <Form.Select placeholder="Relation/relationship">
+            <Form.Select  defaultValue={data.relationship}  name="relationship" onChange={handleInputChange} >
               <option value="Friend">Friend</option>
               <option value="Family">Family</option>
               <option value="Coworker">Coworker</option>
               <option value="Other">Other</option>
             </Form.Select>
           </Col>
-            <label>Favorites</label>
+        </Row>
+            <h3><label style={{textDecoration: "underline", padding: "10px"}}>Favorites</label></h3>
+        <Row>
           <Col>
-            <Form.Label>Color(s)</Form.Label>
-            <Form.Control placeholder="Colors" />
+            <Form.Label>Colors</Form.Label>
+            <Form.Control  defaultValue={data.favorites.colors}  name="colors" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
           <Form.Label>Music</Form.Label>
-            <Form.Control placeholder="Music" />
+            <Form.Control  defaultValue={data.favorites.music}  name="music" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Flowers</Form.Label>
-            <Form.Control placeholder="Flowers" />
+            <Form.Control  defaultValue={data.favorites.flowers}  name="flowers" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Clothes</Form.Label>
-            <Form.Control placeholder="Clothes" />
+            <Form.Control  defaultValue={data.favorites.clothes}  name="clothes" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Food/Snacks</Form.Label>
-            <Form.Control placeholder="Food or Snacks" />
+            <Form.Control  defaultValue={data.favorites.foodSnacks}   name="foodSnacks" onChange={handleFavoritesChange} />
           </Col>
+        </Row>
+        <Row>
           <Col>
             <Form.Label>Candy</Form.Label>
-            <Form.Control placeholder="Candy" />
+            <Form.Control  defaultValue={data.favorites.candy}  name="candy" onChange={handleFavoritesChange} />
           </Col>
           <Col>
             <Form.Label>Coffee/Tea</Form.Label>
-            <Form.Control placeholder="Coffee or Tea" />
+            <Form.Control  defaultValue={data.favorites.coffeetea}  name="coffeetea" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Stores</Form.Label>
-            <Form.Control placeholder="Stores" />
+            <Form.Control  defaultValue={data.favorites.stores}  name="stores" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Beverages</Form.Label>
-            <Form.Control placeholder="Beverages" />
+            <Form.Control  defaultValue={data.favorites.beverages}  name="beverages" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Movies</Form.Label>
-            <Form.Control placeholder="Movies" />
+            <Form.Control  defaultValue={data.favorites.movies}   name="movies" onChange={handleFavoritesChange} />
           </Col>
+        </Row>
+        <Row>
           <Col>
             <Form.Label>Shows</Form.Label>
-            <Form.Control placeholder="Shows" />
+            <Form.Control  defaultValue={data.favorites.shows}  name="shows" onChange={handleFavoritesChange} />
           </Col>
           <Col>
             <Form.Label>Scents</Form.Label>
-            <Form.Control placeholder="Scents" />
+            <Form.Control  defaultValue={data.favorites.scents}   name="scents" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Accessories</Form.Label>
-            <Form.Control placeholder="Accessories" />
+            <Form.Control  defaultValue={data.favorites.accessories}  name="accessories" onChange={handleFavoritesChange}  />
           </Col>
           <Col>
             <Form.Label>Desserts</Form.Label>
-            <Form.Control placeholder="Desserts" />
+            <Form.Control  defaultValue={data.favorites.dessert}   name="dessert" onChange={handleFavoritesChange} />
           </Col>
           <Col>
             <Form.Label>Sports/Teams</Form.Label>
-            <Form.Control placeholder="Sports or Sports Team" />
+            <Form.Control  defaultValue={data.favorites.sports}  name="sports" onChange={handleFavoritesChange}  />
           </Col>
-          <label>Sizes:</label>
+        </Row>
+          <h3><label style={{textDecoration: "underline", padding: "10px"}}>Sizes:</label></h3>
+        <Row>
           <Col>
             <Form.Label>Shirt/Top</Form.Label>
-            <Form.Control placeholder="Shirt or Top" />
+            <Form.Control  defaultValue={data.sizes.shirttop}   name="shirtop" onChange={handleSizesChange} />
           </Col>
           <Col>
             <Form.Label>Pants/Bottoms</Form.Label>
-            <Form.Control placeholder="Bottoms or pants size" />
+            <Form.Control  defaultValue={data.sizes.pantsbottom}   name="pantsbottom" onChange={handleSizesChange} />
           </Col>
           <Col>
             <Form.Label>Dress</Form.Label>
-            <Form.Control placeholder="Dress" />
+            <Form.Control  defaultValue={data.sizes.dress}   name="dress" onChange={handleSizesChange} />
           </Col>
           <Col>
             <Form.Label>Shoes</Form.Label>
-            <Form.Control placeholder="Shoe" />
+            <Form.Control  defaultValue={data.sizes.shoe}   name="shoe" onChange={handleSizesChange} />
           </Col>
           <Col>
             <Form.Label>Ring</Form.Label>
-            <Form.Control placeholder="Ring" />
+            <Form.Control  defaultValue={data.sizes.ring}   name="ring" onChange={handleSizesChange} />
           </Col>
 
-          <label>Misc</label>
+          <h3><label style={{textDecoration: "underline", padding: "10px"}}>Misc</label></h3>
           <Col>
             <Form.Label>Hobbies</Form.Label>
-            <Form.Control placeholder="Hobbies..." />
+            <Form.Control as="textarea" defaultValue={data.hobbies}   name="hobbies" onChange={handleInputChange} />
           </Col>
           <Col>
             <Form.Label>Collections</Form.Label>
-            <Form.Control placeholder="Collections..." />
+            <Form.Control as="textarea" defaultValue={data.collections}   name="collections" onChange={handleInputChange} />
           </Col>
           <Col>
             <Form.Label>Don't Need</Form.Label>
-            <Form.Control placeholder="Don't Need..." />
+            <Form.Control as="textarea" defaultValue={data.dontneed}   name="dontneed" onChange={handleInputChange}  />
           </Col>
           
         </Row>
