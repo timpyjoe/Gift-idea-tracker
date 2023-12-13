@@ -1,65 +1,67 @@
 import React, { useReducer, useState } from 'react';
+import './style.css'
 
 
-const formReducer = (state, event) => {
-  return {
-    ...state,
-    [event.name]: event.value
-  }
-}
 
-function GiftIdeas() {
-  const [formData, setFormData] = useReducer(formReducer, {});
-  const [submitting, setSubmitting] = useState(false);
+export default function GiftIdeas() {
+  const [previousEntries, setPreviousEntries] = useState([])
 
-  const handleSubmit = event => {
+  const [formData, setFormData] = useState({
+    name: '',
+    descrip: '',
+  });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmitting(true);
-
-  }
-
-  const handleChange = event => {
-    setFormData({
-      name: event.target.name,
-      value: event.target.value,
-    });
-  }
-
+    console.log(formData);
+    setPreviousEntries([...previousEntries, formData])
+    setFormData({ name: "", descrip: "" })
+  };
   return (
+    <div>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            Description:
+            <input
+              type="text"
+              name="descrip"
+              value={formData.descrip}
+              onChange={handleInputChange}
+            />
+          </label>
+          <button type="submit">Enter Gift Idea</button>
+        </form>
+      </div>
 
+      <div>
+        {previousEntries.map(entry => (
 
-    <div className="wrapper">
-      <h1>Gift Ideas:</h1>
-      {submitting &&
-        <div>
           <ul>
-            {Object.entries(formData).map(([name, value]) => (
-              <li key={name}><strong>{name}</strong>:{value.toString()}</li>
-            ))}
+            <li key={entry.name}></li>
+            <li key={entry.descrip}></li>
           </ul>
-        </div>
-      }
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <label>
-            <p>Gift Ideas:</p>
-            <input name="name" onChange={handleChange} />
-          </label>
-          <label>
-            <p>Description:</p>
-            <input type="textarea" name="value" onChange={handleChange} />
-          </label>
-        </fieldset>
-        <button type="submit">Enter Gift Idea</button>
-      </form>
+        ))}
+      </div>
+
     </div>
-  )
+
+  );
+
 };
 
-export default GiftIdeas;
-
-// Save the file.When you do the page will refresh and you’ll be able to enter data.
-
-// Now that you are collecting the form state, update the user display message to show the data in an unordered list(<ul>) element.
-
-//   Convert the data to an array using Object.entries, then map over the data converting each member of the array to an <li> element with the name and the value. Be sure to use the name as the key prop for the element: //

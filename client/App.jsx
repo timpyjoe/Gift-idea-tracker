@@ -20,6 +20,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/authpage" element={<AuthPage />} />
           <Route path="/giftee/:id" element={<GifteePage />} />
+          <Route path="/giftee/add" element={<GifteeForm />} />
           <Route path="/user" element={
             <ProtectedRoute>
               <UserPage />
