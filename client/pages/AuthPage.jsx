@@ -1,6 +1,7 @@
 // import { useState, useEffect } from "react"
 import Auth from "../components/Auth"
 import "./stylePage.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Lottie from "lottie-react";
 import Animation2 from "../assets/animations/animation2.json";
 export default function AuthPage() {

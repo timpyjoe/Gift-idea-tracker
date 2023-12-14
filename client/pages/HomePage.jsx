@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import Animation1 from "../assets/animations/animation1.json";
 
 import './stylePage.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function HomePage() {
 
