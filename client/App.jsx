@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppProvider from './utils/AppProvider';
+import './App.css'
 
 import { Header, ProtectedRoute, GifteeForm, Footer } from './components';
 import { HomePage, AuthPage, LogoutPage, UserPage, GifteePage } from './pages/index'

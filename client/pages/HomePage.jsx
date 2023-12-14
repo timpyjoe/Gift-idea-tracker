@@ -9,13 +9,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function HomePage() {
 
   return (
+
     <main
       className="homepage-container"
     >
       <button className='create-btn' style={{
         fontFamily: "Caprasimo, serif", display: 'flex', justifyContent: 'center', alignItems: 'center'
       }} as="a" href="/authpage"
-      >Create your gifty. box</button>
+      >Create your gifty box</button>
+
 
 
       <div className="lottie-2"
@@ -34,13 +36,4 @@ export default function HomePage() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
 
