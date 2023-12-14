@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import GiftIdeas from "../components/GiftIdeas"
 import GifteeInfo from "../components/GifteeInfo";
+import UpdateGiftee from "../components/GifteeForm";
 
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
@@ -31,11 +32,7 @@ export default function GifteePage() {
       setCurrentGifteeInfo(data.payload);
       console.log(data)
     })
-    // what are you going to do once you have the giftee's information
-    // that you fetched from the backend?
-    // well, you want to store it in state, the currentGifteeInfo state variable
-    // run your setCurrentGifteeInfo setter function somwhere here, to update
-    // your state variable. That way, you actually render the GifteePage
+    
 
   }
 
@@ -54,6 +51,7 @@ export default function GifteePage() {
       className="main-container"
     >
       <GifteeInfo currentGifteeInfo={currentGifteeInfo}/>
+      {/* <UpdateGiftee currentGifteeInfo={currentGifteeInfo}/> */}
       
       <section className="gift-ideas">
         <GiftIdeas />

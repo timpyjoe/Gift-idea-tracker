@@ -87,19 +87,19 @@ const gifteeSchema = new Schema({
       default: ""
     },
     pantsbottom: {
-      type: Number,
+      type: String,
       defualt: ""
     },
     dress: {
-      type: Number,
+      type: String,
       default: ""
     },
     shoe: {
-      type: Number,
+      type: String,
       default: ""
     },
     ring: {
-      type: Number,
+      type: String,
       default: ""
     }
   },

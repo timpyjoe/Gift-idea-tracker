@@ -8,35 +8,23 @@ export default function HomePage() {
     <main
       className="main"
       style={{
-
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        backgroundImage: "url('https://i.imgur.com/3ocYD4J.png')",
-        backgroundSize: 'cover',
-
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D')",
+        backgroundSize: "cover",
       }}
     >
-
-
-      <Button className='create-btn btn-' variant="outline-light" as="a" href="/authpage">Create your gifty. box</Button>
-
-
-
-    </main >
-
-
-  )
-
       <div
         style={{
           position: "absolute",
-          top: "100%",
+          top: "60%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          height: '300px',
-          width: '300px'
+          height: '200px',
+          width: '200px'
         }}
       >
         <Lottie animationData={Animation1} loop={true} />
@@ -48,5 +36,4 @@ export default function HomePage() {
       </div>
     </main>
   );
-
 }
