@@ -1,7 +1,115 @@
 #root {
+
+  height: 100vh;
+  /* max-width: 100%; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  background-image: url(https://i.imgur.com/3ocYD4J.png);
+  background-size: cover;
   font-family: 'Caprasimo', serif;
   color: white;
 }
+
+.delete-giftee-btn {
+  font: 'Caprasimo';
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  height: auto;
+  width: 10rem;
+  background-color: #921224;
+  border-color: white;
+}
+
+.edit-giftee-btn {
+  font: 'Caprasimo';
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  height: auto;
+  width: 10rem;
+  background-color: #243A73;
+  border-color: white;
+}
+
+.gift-ideas {
+  display: flex;
+  justify-content: center;
+}
+
+.gift-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  height: 200px;
+}
+
+.li-display1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.li-display2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  padding: 2px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.gift-ideas-btn {
+  font: 'Caprasimo';
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #105E62;
+
+}
+
+.gift-ideas {
+  display: flex;
+  
+}
+
+.giftee-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-right: 50%;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.gift-idea-container {
+  min-width: 100;
+  max-width: 100;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 45%;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+
+
+.homepage-container {
 
 h2 {
   margin-left: 100px;
@@ -11,12 +119,12 @@ h2 {
   align-items: center;
 }
 
-.container-box {
+/* .container-box {
   background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
   background-size: cover;
 
   height: 100vh;
-}
+} */
 
 .gift-idea-container {
 
@@ -31,7 +139,6 @@ h2 {
 }
 
 .homepage-style {
-  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -39,10 +146,6 @@ h2 {
   height: 100vh;
 }
 
-.auth-style {
-  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
-  background-size: cover;
-}
 
 .auth-container {
   display: flex;
@@ -50,6 +153,7 @@ h2 {
   margin-top: 50px;
 
 }
+
 
 .lottie-2 {
   display: flex;
@@ -100,9 +204,13 @@ h2 {
   align-items: center;
 }
 
-h2,
-label {
-  font-family: 'Caprasimo', serif;
+
+.create-giftee-btn {
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+
 }
 
 .create-btn {
@@ -115,6 +223,11 @@ label {
   padding: 10px 60px;
   border-radius: 15px;
   margin: 10px 0px;
+
+  display: flex;
+  justify-content: stretch;
+  flex-basis: content;
+
 }
 
 .submit-btn {
@@ -128,6 +241,14 @@ label {
   font-family: 20px, 'Caprasimo', 'serif';
   color: white;
   background-color: transparent;
+  border-color: white;
+}
+
+
+.edit-giftee-btn {
+  font-family: 20px, 'Caprasimo', 'serif';
+  color: white;
+  background-color: light;
   border-color: white;
 }
 

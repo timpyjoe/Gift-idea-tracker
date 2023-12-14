@@ -26,14 +26,14 @@ export default function GifteePage() {
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
 
-    const  data  = await fetch(`/api/giftee/${id}`)// not sure if this is correct
-    .then(function(response){
-      return response.json()
-    }).then(function(data){
+    const data = await fetch(`/api/giftee/${id}`)// not sure if this is correct
+      .then(function (response) {
+        return response.json()
+      }).then(function (data) {
 
-      setCurrentGifteeInfo(data.payload);
-    })
-    
+        setCurrentGifteeInfo(data.payload);
+      })
+
 
 
   }
@@ -52,19 +52,29 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
-
-      <GifteeInfo currentGifteeInfo={currentGifteeInfo} />
-
+      <div className="giftee-info">
+        <GifteeInfo currentGifteeInfo={currentGifteeInfo} />
+      </div>
 
       <section className="gift-ideas">
         <GiftIdeas />
       </section>
 
-      <section className="link-ideas">
-        <h6>Click here for more gifty. ideas!</h6>
-        <a href="https://pinterest.com" target="_blank"></a>
-        <a href="https://target.com" target="_blank"></a>
-        <a href="https://amazon.com" target="_blank"></a>
+      <section>
+        <div className="gift-idea-container">
+          <h2>Click here for more gifty ideas!</h2>
+
+          <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+            Pinterest Inspiration
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+          </a>{" "}
+          <br />
+        </div>
       </section>
 
     </main>

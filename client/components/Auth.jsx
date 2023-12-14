@@ -49,6 +49,17 @@ export default function Auth({ usage = "signup" }) {
           <div>
             <h2>{usage === "signup" ? "Signup" : "Login"}</h2>
             <div>
+
+              <label className="d-block" style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center'
+            
+
+              }}>Email Address</label>
+              <input type="text" name="email" value={userData.email} onChange={handleInputChange} />
+            </div>
+
               <div>
                 <label className="d-block">Email Address</label>
                 <input type="text" name="email" value={userData.email} onChange={handleInputChange} />

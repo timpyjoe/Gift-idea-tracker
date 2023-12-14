@@ -92,40 +92,54 @@ export default function UserPage() {
   if (!user._id, !giftees) return <></>
   return (
     <>
-      
 
 
-      <div className="container-box">
-        <div className="giftee-list">
-          <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
-          <h2>Giftees:</h2>
-          <ul>
-            {giftees.map((person) =>
-              <li key={person._id}>
-                <a href={`/giftee/${person._id}`}>
-                  {person.name}
-                </a>
-              </li>
-            )
-            }
-          </ul>
 
-          
-          <section className="idea-container">
-            <h6>Click here for more gifty. ideas!</h6>
-            <a href="https://pinterest.com" target="_blank"></a>
-            <a href="https://target.com" target="_blank"></a>
-            <a href="https://amazon.com" target="_blank"></a>
-          </section>
-        </div>
+  
+      <div className="giftee-list">
+        <Button className="create-giftee-btn" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
+        <h3>Giftees:</h3>
+        <ul>
+          {giftees.map((person) =>
+            <li key={person._id}>
+              <a href={`/giftee/${person._id}`}>
+                {person.name}
+              </a>
+            </li>
+          )
+          }
+        </ul>
       </div>
-      <div style={{
+      <section>
+        <div className="gift-idea-container">
+          <h2>Click here for more gifty ideas!</h2>
+
+          <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+            Pinterest Inspiration
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+          </a>{" "}
+          <br />
+        </div>
+      </section>
+
+      {/* </div> */}
+      < div style={{
 
         height: '400px',
         width: '400px'
-      }}>
+      }
+      }>
         <Lottie animationData={Animation2} loop={true} />
-      </div>
+
+      </div >
+
+    </>
+
 
 
     </>
@@ -134,7 +148,6 @@ export default function UserPage() {
 
 
 
-{/* when we list the giftees, we will link to the Gftee page for each like this: */ }
 
 
 

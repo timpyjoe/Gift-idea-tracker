@@ -12,10 +12,11 @@ function DeleteButton({ gifteeId }) {
   const handleClose = () => {
     if (formData === "Delete") {
       const deleteGiftee = fetch(`/api/giftee/${gifteeId}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json"
-      }}
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
       )
       setShow(false);
       window.location.href = '/user'
@@ -23,7 +24,7 @@ function DeleteButton({ gifteeId }) {
   }
   return (
     <>
-      <Button variant="danger" onClick={handleShow}>
+      <Button className="delete-giftee-btn" variant="danger" onClick={handleShow}>
         Delete Giftee
       </Button>
 
@@ -43,10 +44,10 @@ function DeleteButton({ gifteeId }) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleCancel}>
+          <Button className="submit-btn" variant="secondary" onClick={handleCancel}>
             Cancel
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button className="submit-btn" variant="primary" onClick={handleClose}>
             Send Them Off
           </Button>
         </Modal.Footer>

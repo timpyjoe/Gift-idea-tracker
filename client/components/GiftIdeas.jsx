@@ -26,27 +26,27 @@ export default function GiftIdeas() {
   };
   return (
     <div>
-      <div>
+      <div className='gift-form'>
         <form onSubmit={handleSubmit}>
-          <label>
+          <label className='li-display1'>
             Name:
-            <input
+            <input className='form-input'
               type="text"
               name="name"
               value={formData.name}
               onChange={handleInputChange}
             />
           </label>
-          <label>
+          <label className='li-display2'>
             Description:
-            <input
+            <input className='form-input'
               type="text"
               name="descrip"
               value={formData.descrip}
               onChange={handleInputChange}
             />
           </label>
-          <button type="submit">Enter Gift Idea</button>
+          <button className="gift-ideas-btn" type="submit">Enter Gift Idea</button>
         </form>
       </div>
 
@@ -54,8 +54,10 @@ export default function GiftIdeas() {
         {previousEntries.map(entry => (
 
           <ul>
-            <li key={entry.name}></li>
-            <li key={entry.descrip}></li>
+            <div className='list-of-ideas'>
+              <li key={entry.name}>Idea: {entry.name}</li>
+              <li key={entry.descrip}>Description: {entry.descrip}</li>
+            </div>
           </ul>
         ))}
       </div>
