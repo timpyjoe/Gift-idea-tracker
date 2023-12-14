@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import GiftIdeas from "../components/GiftIdeas"
 import GifteeInfo from "../components/GifteeInfo";
+import UpdateGiftee from "../components/GifteeForm";
 
 // import Giftee from "../../server/models/Giftee";
 // import { Card } from 'react-bootstrap';
@@ -24,19 +25,17 @@ export default function GifteePage() {
   const { id } = useParams()
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
-    const data = await fetch(`/api/giftee/${id}`)// not sure if this is correct
-      .then(function (response) {
-        return response.json()
-      }).then(function (data) {
 
-        setCurrentGifteeInfo(data.payload);
-        console.log(data)
-      })
-    // what are you going to do once you have the giftee's information
-    // that you fetched from the backend?
-    // well, you want to store it in state, the currentGifteeInfo state variable
-    // run your setCurrentGifteeInfo setter function somwhere here, to update
-    // your state variable. That way, you actually render the GifteePage
+    const  data  = await fetch(`/api/giftee/${id}`)// not sure if this is correct
+    .then(function(response){
+      return response.json()
+    }).then(function(data){
+
+      setCurrentGifteeInfo(data.payload);
+      console.log(data)
+    })
+    
+
 
   }
 
@@ -54,7 +53,9 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
+
       <GifteeInfo currentGifteeInfo={currentGifteeInfo} />
+
 
       <section className="gift-ideas">
         <GiftIdeas />

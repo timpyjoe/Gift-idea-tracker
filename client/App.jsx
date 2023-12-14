@@ -6,6 +6,7 @@ import { HomePage, AuthPage, LogoutPage, UserPage, GifteePage } from './pages/in
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import GifteeEditPage from './pages/GifteeEditPage';
 
 
 export default function App() {
@@ -20,7 +21,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/authpage" element={<AuthPage />} />
           <Route path="/giftee/:id" element={<GifteePage />} />
-          <Route path="/giftee/add" element={<GifteeForm />} />
+          <Route path="/giftee/:id/edit" element={<GifteeEditPage />} />
           <Route path="/user" element={
             <ProtectedRoute>
               <UserPage />

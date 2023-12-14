@@ -12,6 +12,7 @@ import LogoutPage from "./pages/LogoutPage.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import GifteePage from './pages/GifteePage.jsx';
+import GifteeEditPage from './pages/GifteeEditPage.jsx';
 // import { LogoutPage } from './pages/index.js';
 
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: 'giftee/:id',
         element: <GifteePage />
+      },
+      {
+        path: 'giftee/:id/edit/',
+        element: <GifteeEditPage />
       },
       {
         path: 'giftee',

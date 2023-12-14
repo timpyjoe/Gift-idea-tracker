@@ -1,5 +1,4 @@
-import "./style.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'react-bootstrap'
 
 export default function GifteeInfo({ currentGifteeInfo }) {
 
@@ -40,12 +39,14 @@ export default function GifteeInfo({ currentGifteeInfo }) {
           <li>Shoe: {currentGifteeInfo.sizes.shoe}</li>
           {/* Ring: {currentGifteeInfo.sizes.ring} */}
         </ul>
+
         <li>Hobbies: {currentGifteeInfo.hobbies}</li>
         <li>Collections: {currentGifteeInfo.collections}</li>
         <li>Don't Need: {currentGifteeInfo.dontneed}</li>
         <li>Extra Ideas: {currentGifteeInfo.blank}</li>
       </ul>
+        <Button onClick={() => {window.location.href = `/giftee/${currentGifteeInfo._id}/edit`}}>Edit Giftee</Button>
+      </section>
 
-    </section>
   )
 }

@@ -39,17 +39,29 @@ export default function UserPage() {
     "gifter": user._id
   }
 
+ 
 
   const addNewGiftee = async () => {
+
     const newGiftee = await fetch("/api/giftee", {
-      method: "POST",
+      method:"POST",
+
       headers: {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(formHolder)
-    })
-    console.log(newGiftee);
-  }
+    }).then(response => response.json()
+    ).then(data => {
+       window.location.href = `/giftee/${data.payload._id}/edit`})
+    }
+      
+  // const handleClick = async () => {
+  //   await addNewGiftee();
+  //   window.setTimeout(() => { window.location.href = `/giftee/${newGiftee._id}/edit`}, 500)
+  // }
+  
+    
+  
 
   const [giftees, setGiftees] = useState()
 
