@@ -1,3 +1,14 @@
+ :root {
+   font-family: 'Caprasimo', serif;
+ }
+
+ .create-btn {
+   font-family: 'Caprasimo', serif;
+   font-size: medium;
+
+ }
+
+
  .main-container {
    display: flex;
    height: 100vh;

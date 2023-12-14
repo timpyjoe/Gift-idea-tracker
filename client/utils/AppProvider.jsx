@@ -28,7 +28,7 @@ export default function AppProvider(props) {
       }
     } catch (err) {
       if (window.location.pathname !== "" && !window.location.pathname.includes("/auth")) {
-        window.location.href = "/authpage"
+        window.location.href = "/user"
       }
     }
   }

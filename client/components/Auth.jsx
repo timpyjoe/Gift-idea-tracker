@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useAppCtx } from "../utils/AppProvider"
-
+import "./style.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Auth({ usage = "signup" }) {
 

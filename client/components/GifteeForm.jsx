@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router";
 import { useAppCtx } from "../utils/AppProvider";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import "./style.css"
 
 import Button from 'react-bootstrap/Button';
 
 export default function UpdateGiftee() {
 
   const { user } = useAppCtx()
-  const [form, setForm ] = useState({})
+  const [form, setForm] = useState({})
 
   // These methods will update the state properties.
   function updateForm(value) {
@@ -35,7 +36,7 @@ export default function UpdateGiftee() {
       },
       body: JSON.stringify(form),
     })
-      .then (console.log("submitted!"))
+      .then(console.log("submitted!"))
       .catch(error => {
         window.alert(error);
         return;
@@ -48,7 +49,7 @@ export default function UpdateGiftee() {
       relationship: "",
       tops: "",
       bottoms: "",
-      favorites: { 
+      favorites: {
         colors: "",
         flowers: "",
         clothes: "",
@@ -85,7 +86,7 @@ export default function UpdateGiftee() {
 
 
 
-  if( !user._id ) return <></>
+  if (!user._id) return <></>
   return (
     <div>
       <h3>Create a New Giftee!</h3>

@@ -1,25 +1,34 @@
 .homeClass {
+  font-family: 'Caprasimo', serif;
   color: white;
   text-decoration: none;
   margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .gifteeClass {
+  font-family: 'Caprasimo', serif;
   color: white;
   text-decoration: none;
   margin: 20px;
+  font-size: 20px;
 }
 
 .loginClass {
+  font-family: 'Caprasimo', serif;
   color: white;
   text-decoration: none;
   margin: 20px;
+  font-size: 20px;
 }
 
 .logoutClass {
+  font-family: 'Caprasimo', serif;
   color: white;
   text-decoration: none;
   margin: 20px;
+  font-size: 20px;
 }
 
 .nav-link-container {
@@ -28,6 +37,15 @@
 
 .nav-contained {
   align-items: center;
+}
+
+h2,
+label {
+  font-family: 'Caprasimo', serif;
+}
+
+button {
+  font-family: 'Caprasimo', serif;
 }
 
 /* .img {
