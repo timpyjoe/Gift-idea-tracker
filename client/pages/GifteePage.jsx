@@ -14,6 +14,7 @@ import Button from 'react-bootstrap/Button';
 
 import { useParams } from "react-router-dom";
 import "./stylePage.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function GifteePage() {
@@ -24,6 +25,7 @@ export default function GifteePage() {
   const { id } = useParams()
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
+
     const  data  = await fetch(`/api/giftee/${id}`)// not sure if this is correct
     .then(function(response){
       return response.json()
@@ -33,6 +35,7 @@ export default function GifteePage() {
       console.log(data)
     })
     
+
 
   }
 
@@ -50,9 +53,10 @@ export default function GifteePage() {
     <main
       className="main-container"
     >
-      <GifteeInfo currentGifteeInfo={currentGifteeInfo}/>
-      {/* <UpdateGiftee currentGifteeInfo={currentGifteeInfo}/> */}
-      
+
+      <GifteeInfo currentGifteeInfo={currentGifteeInfo} />
+
+
       <section className="gift-ideas">
         <GiftIdeas />
       </section>

@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { useNavigate } from "react-router";
 import { useAppCtx } from "../utils/AppProvider";
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import "./style.css"
 
 import Button from 'react-bootstrap/Button';
 import { Last } from "react-bootstrap/esm/PageItem";
 
 export default function UpdateGiftee({ currentGifteeInfo }) {
 
+
   // const { user } = useAppCtx()
   const [data, setData ] = useState(currentGifteeInfo)
+
 
   // Updates the state when the "About Properties" are changed.
   function handleInputChange(e){
@@ -42,12 +46,14 @@ export default function UpdateGiftee({ currentGifteeInfo }) {
       },
       body: JSON.stringify(data),
     })
+
       .then (function(response) {
         return response.json()
       }).then(function(payload){
         console.log(payload)
         window.location.href = `/giftee/${currentGifteeInfo._id}`
       })
+
       .catch(error => {
         console.log(error);
         return;
@@ -64,7 +70,6 @@ export default function UpdateGiftee({ currentGifteeInfo }) {
 
 
 
-  // if( !user._id ) return <></>
   return (
     <div>
       <h3>Create a New Giftee!</h3>

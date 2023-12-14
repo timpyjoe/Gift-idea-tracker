@@ -3,7 +3,11 @@ import Button from "react-bootstrap/Button";
 import Lottie from "lottie-react";
 import Animation1 from "../assets/animations/animation1.json";
 
+import './stylePage.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default function HomePage() {
+
   return (
     <main
       className="main"
@@ -17,6 +21,22 @@ export default function HomePage() {
         backgroundSize: "cover",
       }}
     >
+
+
+
+      <button className='create-btn' style={{
+        fontFamily: "Caprasimo, serif"
+      }} variant="outline-light" as="a" href="/authpage"
+      >Create your gifty. box</button>
+
+
+
+
+
+
+
+
+
       <div
         style={{
           position: "absolute",
@@ -29,11 +49,7 @@ export default function HomePage() {
       >
         <Lottie animationData={Animation1} loop={true} />
       </div>
-      <div>
-        <Button as="a" href="/authpage">
-          Create your gifty. box
-        </Button>
-      </div>
+
     </main>
   );
 }

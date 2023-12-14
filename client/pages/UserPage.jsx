@@ -17,7 +17,7 @@ import { useParams, Link } from "react-router-dom"
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 // import router from "../../server/routes/api/userroutes";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./stylePage.css"
 
 
@@ -39,11 +39,13 @@ export default function UserPage() {
     "gifter": user._id
   }
 
-  let newGiftee
+ 
 
   const addNewGiftee = async () => {
-    newGiftee = await fetch("/api/giftee", {
+
+    const newGiftee = await fetch("/api/giftee", {
       method:"POST",
+
       headers: {
         "Content-Type": "application/json"
       },
@@ -66,28 +68,28 @@ export default function UserPage() {
   const getGiftees = async () => {
 
     const userObj = fetch(`/api/user/${user._id}`, {
-      method:"GET",
+      method: "GET",
       headers: {
         "Content-Type": "application/json"
       }
-    }).then(function(response){
+    }).then(function (response) {
       return response.json()
-    }).then(function(data){
+    }).then(function (data) {
       console.log(data.payload.giftees)
       setGiftees(data.payload.giftees)
     })
   }
   useEffect(() => {
-    
-    if (user._id){
+
+    if (user._id) {
       getGiftees()
-      
+
     };
-    }, [user._id])
-  
+  }, [user._id])
 
 
-  if( !user._id, !giftees ) return <></>
+
+  if (!user._id, !giftees) return <></>
   return (
     <>
       {/* <Container>
@@ -97,19 +99,19 @@ export default function UserPage() {
 
 
 
-    
+
       <div className="container-box">
         <div className="giftee-list">
           <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
           <h2>Giftees:</h2>
           <ul>
-            {giftees.map((person) => 
+            {giftees.map((person) =>
               <li key={person._id}>
                 <a href={`/giftee/${person._id}`}>
                   {person.name}
                 </a>
               </li>
-          )
+            )
             }
           </ul>
           {/* <li>Name of Giftee
@@ -120,33 +122,33 @@ export default function UserPage() {
 
 
 
-        <div className="container-box">
-          <div className="giftee-list">
-            <Link to="/giftee/add">
-              <Button className="create-giftee" size="lg" variant="danger">Create New Giftee</Button> </Link>
+          <div className="container-box">
+            <div className="giftee-list">
+              <Link to="/giftee/add">
+                <Button className="create-giftee" size="lg" variant="danger">Create New Giftee</Button> </Link>
 
-            {/* <h2>Giftees:</h2>
+              {/* <h2>Giftees:</h2>
             <li>Name of Giftee
               <a href="/giftee/:id"></a></li>
             <li>giftee 2</li>
             <li>giftee 3</li>
             <li>giftee 4</li> */}
 
+            </div>
           </div>
-        </div>
-        <section className="idea-container">
-          <h6>Click here for more gifty. ideas!</h6>
-          <a href="https://pinterest.com" target="_blank"></a>
-          <a href="https://target.com" target="_blank"></a>
-          <a href="https://amazon.com" target="_blank"></a>
-        </section>
+          <section className="idea-container">
+            <h6>Click here for more gifty. ideas!</h6>
+            <a href="https://pinterest.com" target="_blank"></a>
+            <a href="https://target.com" target="_blank"></a>
+            <a href="https://amazon.com" target="_blank"></a>
+          </section>
         </div>
       </div>
-     <div style={{
-      height: '400px',
-      width: '400px'
-     }}>
-      <Lottie animationData={Animation2} loop={true} />
+      <div style={{
+        height: '400px',
+        width: '400px'
+      }}>
+        <Lottie animationData={Animation2} loop={true} />
       </div>
       {/* </main> */}
       <footer className="profile-footer">
