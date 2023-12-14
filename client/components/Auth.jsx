@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { useAppCtx } from "../utils/AppProvider"
 import "./style.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css'
 
 export default function Auth({ usage = "signup" }) {
 
@@ -43,42 +42,34 @@ export default function Auth({ usage = "signup" }) {
 
 
   return (
-  
-      <div>
-        <form onSubmit={handleFormSubmit}>
+    <div>
+      <form onSubmit={handleFormSubmit}>
+        <div>
+          <h2>{usage === "signup" ? "Signup" : "Login"}</h2>
           <div>
-            <h2>{usage === "signup" ? "Signup" : "Login"}</h2>
             <div>
-
               <label className="d-block" style={{
                 display: 'flex',
                 flexWrap: 'wrap',
                 alignItems: 'center'
-            
+
 
               }}>Email Address</label>
               <input type="text" name="email" value={userData.email} onChange={handleInputChange} />
             </div>
 
-              <div>
-                <label className="d-block">Email Address</label>
-                <input type="text" name="email" value={userData.email} onChange={handleInputChange} />
-              </div>
-
-              <div>
-                <label className="d-block">Password</label>
-                <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
-              </div>
+            <div>
+              <label className="d-block">Password</label>
+              <input type="password" name="password" value={userData.password} onChange={handleInputChange} />
             </div>
-
-            <button className="submit-btn" style={{
-              fontFamily: "Caprasimo, serif"
-            }} as="a" href="/user/:id">Submit Info</button>
           </div>
-        </form>
-      </div>
-   
-    
+
+          <button className="submit-btn" style={{
+            fontFamily: "Caprasimo, serif"
+          }} as="a" href="/user/:id">Submit Info</button>
+        </div>
+      </form>
+    </div>
   )
 
 }

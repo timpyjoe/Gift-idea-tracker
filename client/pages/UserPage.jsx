@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import Animation2 from "../assets/animations/animation2.json";
 
-import '../App.css'
-
 import { useAppCtx } from "../utils/AppProvider";
 
 
@@ -94,8 +92,7 @@ export default function UserPage() {
     <>
 
 
-
-  
+      {/* <div className="container-box"> */}
       <div className="giftee-list">
         <Button className="create-giftee-btn" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
         <h3>Giftees:</h3>
@@ -129,26 +126,14 @@ export default function UserPage() {
 
       {/* </div> */}
       < div style={{
-
         height: '400px',
         width: '400px'
       }
       }>
         <Lottie animationData={Animation2} loop={true} />
-
       </div >
 
     </>
 
-
-
-    </>
   )
 }
-
-
-
-
-
-
-
