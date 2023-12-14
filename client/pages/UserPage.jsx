@@ -37,12 +37,12 @@ export default function UserPage() {
   //   "gifter": user._id
   // }
 
- 
+
 
   const addNewGiftee = async () => {
 
     const newGiftee = await fetch("/api/giftee", {
-      method:"POST",
+      method: "POST",
 
       headers: {
         "Content-Type": "application/json"
@@ -50,16 +50,17 @@ export default function UserPage() {
       body: JSON.stringify(formHolder)
     }).then(response => response.json()
     ).then(data => {
-       window.location.href = `/giftee/${data.payload._id}/edit`})
-    }
-      
+      window.location.href = `/giftee/${data.payload._id}/edit`
+    })
+  }
+
   // const handleClick = async () => {
   //   await addNewGiftee();
   //   window.setTimeout(() => { window.location.href = `/giftee/${newGiftee._id}/edit`}, 500)
   // }
-  
-    
-  
+
+
+
 
   const [giftees, setGiftees] = useState()
 
@@ -89,7 +90,7 @@ export default function UserPage() {
   if (!user._id, !giftees) return <></>
   return (
     <>
-      
+
 
       <div className="container-box">
         <div className="giftee-list">
@@ -105,12 +106,23 @@ export default function UserPage() {
             )
             }
           </ul>
-          
-          <section className="idea-container">
-            <h6>Click here for more gifty. ideas!</h6>
-            <a href="https://pinterest.com" target="_blank"></a>
-            <a href="https://target.com" target="_blank"></a>
-            <a href="https://amazon.com" target="_blank"></a>
+
+          <section>
+            <div className="gift-idea-container">
+              <h2>Click here for more gifty ideas!</h2>
+              <div className="links-container">
+                <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+                  Pinterest Inspiration
+                </a>{" "}
+                <br />
+                <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+                </a>{" "}
+                <br />
+                <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+                </a>{" "}
+                <br />
+              </div>
+            </div>
           </section>
         </div>
       </div>

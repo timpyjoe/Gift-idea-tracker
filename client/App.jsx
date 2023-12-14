@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppProvider from './utils/AppProvider';
 
-import { Header, ProtectedRoute, GifteeForm } from './components';
+import { Header, ProtectedRoute, GifteeForm, Footer } from './components';
 import { HomePage, AuthPage, LogoutPage, UserPage, GifteePage } from './pages/index'
 
 
@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/logout" element={<LogoutPage />} />
         </Routes>
       </div>
-
+      <Footer />
     </AppProvider>
 
   )
