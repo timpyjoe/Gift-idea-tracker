@@ -1,8 +1,8 @@
 #root {
   height: 100vh;
   max-width: 100%;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   height: 100vh;
   background-image: url(https://i.imgur.com/3ocYD4J.png);
   background-size: cover;
@@ -10,23 +10,29 @@
   color: white;
 }
 
-h2 {
+.giftee-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  margin-right: 50%;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 15%;
 }
-
-
 
 .gift-idea-container {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 100px;
-  text-decoration: none;
-  margin: 20px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 50%;
+  padding: 20px;
   font-size: 20px;
-
+  text-align: center;
+  margin-top: 15%;
 }
+
+
 
 .homepage-container {
   background-size: cover;
@@ -36,10 +42,6 @@ h2 {
   height: 100vh;
 }
 
-/* .auth-style {
-  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
-  background-size: cover;
-} */
 
 .auth-container {
   display: flex;
@@ -47,15 +49,6 @@ h2 {
   margin-top: 50px;
 
 }
-
-/* .lottie-2 {
-  position: absolute;
-  top: "60%";
-  left: "50%";
-  transform: "translate(-50%, -50%)";
-  height: '100px';
-  width: '100px'
-} */
 
 .homeClass {
   font-family: 'Caprasimo', serif;
@@ -98,9 +91,11 @@ h2 {
   align-items: center;
 }
 
-h2,
-label {
-  font-family: 'Caprasimo', serif;
+.create-giftee-btn {
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  background-color: transparent;
+  border-color: white;
 }
 
 .create-btn {

@@ -92,57 +92,53 @@ export default function UserPage() {
     <>
 
 
-      <div className="container-box">
-        <div className="giftee-list">
-          <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
-          <h2>Giftees:</h2>
-          <ul>
-            {giftees.map((person) =>
-              <li key={person._id}>
-                <a href={`/giftee/${person._id}`}>
-                  {person.name}
-                </a>
-              </li>
-            )
-            }
-          </ul>
-
-          <section>
-            <div className="gift-idea-container">
-              <h2>Click here for more gifty ideas!</h2>
-              <div className="links-container">
-                <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
-                  Pinterest Inspiration
-                </a>{" "}
-                <br />
-                <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
-                </a>{" "}
-                <br />
-                <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
-                </a>{" "}
-                <br />
-              </div>
-            </div>
-          </section>
-        </div>
+      {/* <div className="container-box"> */}
+      <div className="giftee-list">
+        <Button className="create-giftee-btn" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
+        <h3>Giftees:</h3>
+        <ul>
+          {giftees.map((person) =>
+            <li key={person._id}>
+              <a href={`/giftee/${person._id}`}>
+                {person.name}
+              </a>
+            </li>
+          )
+          }
+        </ul>
       </div>
+      <section>
+        <div className="gift-idea-container">
+          <h2>Click here for more gifty ideas!</h2>
+          <div className="links-container">
+            <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+              Pinterest Inspiration
+            </a>{" "}
+            <br />
+            <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+            </a>{" "}
+            <br />
+            <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+            </a>{" "}
+            <br />
+          </div>
+        </div>
+      </section>
+
+      {/* </div> */}
       <div style={{
         height: '400px',
         width: '400px'
       }}>
         <Lottie animationData={Animation2} loop={true} />
       </div>
-      {/* </main> */}
-      <footer className="profile-footer">
-        {/* Link the user back to the homepage. The to prop is used in place of an href */}
-        <Link to="/">← Go Back</Link>
-      </footer>
+
     </>
 
   )
 }
 
-// when we list the giftees, we will link to the Gftee page for each like this: 
+
 
 
 
