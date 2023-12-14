@@ -30,17 +30,48 @@
   border-color: white;
 }
 
-.gift-ideas {
-  display: flex;
-  justify-content: center;
-}
-
-form {
+.gift-form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: right;
+  align-content: center;
   height: 200px;
+}
+
+.li-display1 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.li-display2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  padding: 3px;
+}
+
+.form-input {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5px;
+  padding: 2px;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.gift-ideas-btn {
+  font: 'Caprasimo';
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  background-color: transparent;
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 10px;
+  border-color: white;
+  background-color: #105E62;
+
 }
 
 .gift-ideas-btn {
