@@ -10,15 +10,15 @@ export default function GifteeEditPage() {
   const { id } = useParams()
   async function getGifteeInfo() {
     // store the response's value in some variable in the line below
-    const  data  = await fetch(`/api/giftee/${id}`)// not sure if this is correct
-    .then(function(response){
-      return response.json()
-    }).then(function(data){
+    const data = await fetch(`/api/giftee/${id}`)// not sure if this is correct
+      .then(function (response) {
+        return response.json()
+      }).then(function (data) {
 
-      setCurrentGifteeInfo(data.payload);
-      console.log(data)
-    })
-    
+        setCurrentGifteeInfo(data.payload);
+        console.log(data)
+      })
+
 
   }
 
@@ -26,10 +26,10 @@ export default function GifteeEditPage() {
     getGifteeInfo()
   }, [])
 
-  if ( !currentGifteeInfo ) return <></>
-  return(
-    <>  
-      <GifteeForm currentGifteeInfo={currentGifteeInfo}/>
+  if (!currentGifteeInfo) return <></>
+  return (
+    <>
+      <GifteeForm currentGifteeInfo={currentGifteeInfo} />
 
 
     </>
