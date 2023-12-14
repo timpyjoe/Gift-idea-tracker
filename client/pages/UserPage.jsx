@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import Animation2 from "../assets/animations/animation2.json";
 
-
 import { useAppCtx } from "../utils/AppProvider";
 
 
@@ -34,10 +33,9 @@ export default function UserPage() {
   // }, []);
 
   const { user } = useAppCtx()
-  console.log(user._id)
-  const formHolder = {
-    "gifter": user._id
-  }
+  // const formHolder = {
+  //   "gifter": user._id
+  // }
 
  
 
@@ -75,7 +73,6 @@ export default function UserPage() {
     }).then(function (response) {
       return response.json()
     }).then(function (data) {
-      console.log(data.payload.giftees)
       setGiftees(data.payload.giftees)
     })
   }
@@ -92,13 +89,7 @@ export default function UserPage() {
   if (!user._id, !giftees) return <></>
   return (
     <>
-      {/* <Container>
-        {/* Conditionally render the full profile or a Loading string, depending on whether user data is available 
-        {user.name ? <User user={user} /> : <p>Loading...</p>}
-      </Container> */}
-
-
-
+      
 
       <div className="container-box">
         <div className="giftee-list">
@@ -114,28 +105,7 @@ export default function UserPage() {
             )
             }
           </ul>
-          {/* <li>Name of Giftee
-            <a href="/giftee/:id"></a></li>
-          <li>giftee 2</li>
-          <li>giftee 3</li>
-          <li>giftee 4</li> */}
-
-
-
-          <div className="container-box">
-            <div className="giftee-list">
-              <Link to="/giftee/add">
-                <Button className="create-giftee" size="lg" variant="danger">Create New Giftee</Button> </Link>
-
-              {/* <h2>Giftees:</h2>
-            <li>Name of Giftee
-              <a href="/giftee/:id"></a></li>
-            <li>giftee 2</li>
-            <li>giftee 3</li>
-            <li>giftee 4</li> */}
-
-            </div>
-          </div>
+          
           <section className="idea-container">
             <h6>Click here for more gifty. ideas!</h6>
             <a href="https://pinterest.com" target="_blank"></a>

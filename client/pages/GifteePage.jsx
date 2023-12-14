@@ -32,7 +32,6 @@ export default function GifteePage() {
     }).then(function(data){
 
       setCurrentGifteeInfo(data.payload);
-      console.log(data)
     })
     
 
