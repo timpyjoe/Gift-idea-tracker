@@ -125,13 +125,23 @@ export default function UserPage() {
 
 
           <section>
-            <div className="gift-idea-link">
+            <div className="gift-idea-container">
 
               <h2>Click here for more gifty ideas!</h2>
-              <a href="https://pinterest.com" target="_blank">Pinterest</a>
-              <a href="https://target.com" target="_blank">Target</a>
-              <a href="https://amazon.com" target="_blank">Amazon</a>
 
+              <div className="links-container">
+                <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+                  Pinterest Inspiration
+                </a>{" "}
+                <br />
+                <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+                </a>{" "}
+                <br />
+
+                <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+                </a>{" "}
+                <br />
+              </div>
             </div>
           </section>
           {/* <h2>Giftees:</h2>
@@ -141,7 +151,7 @@ export default function UserPage() {
             <li>giftee 3</li>
             <li>giftee 4</li> */}
 
-        </div>
+        </div >
 
       </div >
 
