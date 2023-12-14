@@ -58,7 +58,9 @@ export default function Auth({ usage = "signup" }) {
             </div>
           </div>
 
-          <button className="mt-2" as="a" href="https://localhost:5173/user/:id">Submit Info</button>
+          <button className="submit-btn" style={{
+            fontFamily: "Caprasimo, serif"
+          }} as="a" href="/user/:id">Submit Info</button>
         </div>
       </form>
     </div>

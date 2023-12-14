@@ -23,10 +23,10 @@ export default function HomePage() {
     >
 
 
-      <button className='create-btn btn-' variant="outline-light" as="a" href="/authpage"
-        style={{
-
-        }}>Create your gifty. box</button>
+      <button className='create-btn' style={{
+        fontFamily: "Caprasimo, serif"
+      }} variant="outline-light" as="a" href="/authpage"
+      >Create your gifty. box</button>
 
 
 

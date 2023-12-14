@@ -2,10 +2,15 @@
    font-family: 'Caprasimo', serif;
  }
 
- .create-btn {
-   font-family: 'Caprasimo', serif;
-   font-size: medium;
-
+ .submit-btn {
+   font-family: 20px, 'Caprasimo', serif;
+   color: white;
+   background-color: transparent;
+   border-color: white;
+   border-width: 3.5px;
+   padding: 10px 60px;
+   border-radius: 15px;
+   margin: 10px 0px;
  }
 
 
