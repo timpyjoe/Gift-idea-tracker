@@ -15,7 +15,7 @@ export default function HomePage() {
       <button className='create-btn' style={{
         fontFamily: "Caprasimo, serif", display: 'flex', justifyContent: 'center', alignItems: 'center'
       }} as="a" href="/authpage"
-      >Create your gifty. box</button>
+      >Create your gifty box</button>
 
 
       <div className="lottie-2"
