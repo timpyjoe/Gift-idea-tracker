@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import Animation2 from "../assets/animations/animation2.json";
 
+import '../App.css'
+
 import { useAppCtx } from "../utils/AppProvider";
 
 
@@ -37,12 +39,12 @@ export default function UserPage() {
   //   "gifter": user._id
   // }
 
- 
+
 
   const addNewGiftee = async () => {
 
     const newGiftee = await fetch("/api/giftee", {
-      method:"POST",
+      method: "POST",
 
       headers: {
         "Content-Type": "application/json"
@@ -50,16 +52,17 @@ export default function UserPage() {
       body: JSON.stringify(formHolder)
     }).then(response => response.json()
     ).then(data => {
-       window.location.href = `/giftee/${data.payload._id}/edit`})
-    }
-      
+      window.location.href = `/giftee/${data.payload._id}/edit`
+    })
+  }
+
   // const handleClick = async () => {
   //   await addNewGiftee();
   //   window.setTimeout(() => { window.location.href = `/giftee/${newGiftee._id}/edit`}, 500)
   // }
-  
-    
-  
+
+
+
 
   const [giftees, setGiftees] = useState()
 
@@ -91,6 +94,7 @@ export default function UserPage() {
     <>
       
 
+
       <div className="container-box">
         <div className="giftee-list">
           <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
@@ -105,6 +109,7 @@ export default function UserPage() {
             )
             }
           </ul>
+
           
           <section className="idea-container">
             <h6>Click here for more gifty. ideas!</h6>
@@ -115,22 +120,21 @@ export default function UserPage() {
         </div>
       </div>
       <div style={{
+
         height: '400px',
         width: '400px'
       }}>
         <Lottie animationData={Animation2} loop={true} />
       </div>
-      {/* </main> */}
-      <footer className="profile-footer">
-        {/* Link the user back to the homepage. The to prop is used in place of an href */}
-        <Link to="/">← Go Back</Link>
-      </footer>
-    </>
 
+
+    </>
   )
 }
 
-// when we list the giftees, we will link to the Gftee page for each like this: 
+
+
+{/* when we list the giftees, we will link to the Gftee page for each like this: */ }
 
 
 

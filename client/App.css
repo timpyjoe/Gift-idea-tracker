@@ -1,0 +1,145 @@
+#root {
+  font-family: 'Caprasimo', serif;
+  color: white;
+}
+
+h2 {
+  margin-left: 100px;
+  padding-left: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container-box {
+  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+
+  height: 100vh;
+}
+
+.gift-idea-container {
+
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+
+}
+
+.homepage-style {
+  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-style {
+  background-image: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lmdCUyMGJveHxlbnwwfHwwfHx8MA%3D%3D');
+  background-size: cover;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+
+}
+
+.lottie-2 {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+}
+
+.homeClass {
+  font-family: 'Caprasimo', serif;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.gifteeClass {
+  font-family: 'Caprasimo', serif;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.loginClass {
+  font-family: 'Caprasimo', serif;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.logoutClass {
+  font-family: 'Caprasimo', serif;
+  color: white;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.nav-link-container {
+  justify-content: center;
+}
+
+.nav-contained {
+  align-items: center;
+}
+
+h2,
+label {
+  font-family: 'Caprasimo', serif;
+}
+
+.create-btn {
+  font: 'Caprasimo';
+  font-family: 20px, 'Caprasimo', serif;
+  color: white;
+  background-color: transparent;
+  border-color: white;
+  border-width: 3.5px;
+  padding: 10px 60px;
+  border-radius: 15px;
+  margin: 10px 0px;
+}
+
+.submit-btn {
+  font-family: 20px, 'Caprasimo', 'serif';
+  color: white;
+  background-color: transparent;
+  border-color: white;
+}
+
+.edit-btn {
+  font-family: 20px, 'Caprasimo', 'serif';
+  color: white;
+  background-color: transparent;
+  border-color: white;
+}
+
+
+
+/* .img {
+  height: 100vh;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://i.imgur.com/3ocYD4J.png);
+  background-size: cover;
+
+} */

@@ -47,9 +47,11 @@ export default function GifteeInfo({ currentGifteeInfo }) {
         <li>Don't Need: {currentGifteeInfo.dontneed}</li>
         <li>Extra Ideas: {currentGifteeInfo.blank}</li>
       </ul>
+
         <Button onClick={() => {window.location.href = `/giftee/${currentGifteeInfo._id}/edit`}}>Edit Giftee</Button>
         <DeleteButton gifteeId={currentGifteeInfo._id} />
       </section>
+
 
   )
 }
