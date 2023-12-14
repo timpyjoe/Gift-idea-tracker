@@ -6,11 +6,11 @@
   height: 100vh;
   background-image: url(https://i.imgur.com/3ocYD4J.png);
   background-size: cover;
+  font-family: 'Caprasimo', serif;
+  color: white;
 }
 
 h2 {
-  margin-left: 100px;
-  padding-left: 190px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -19,11 +19,9 @@ h2 {
 
 
 .gift-idea-container {
-
   display: flex;
   justify-content: flex-end;
   margin-right: 100px;
-
   text-decoration: none;
   margin: 20px;
   font-size: 20px;
@@ -31,7 +29,6 @@ h2 {
 }
 
 .homepage-container {
-
   background-size: cover;
   display: flex;
   justify-content: center;

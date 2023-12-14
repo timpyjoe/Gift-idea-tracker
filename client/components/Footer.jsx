@@ -4,7 +4,7 @@ import React from 'react';
 
 import { useEffect, useState } from "react"
 import { useAppCtx } from "../utils/AppProvider"
-import "./style.css"
+import "../App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Footer = () => {
