@@ -46,6 +46,7 @@ export default function UpdateGiftee({ currentGifteeInfo }) {
         return response.json()
       }).then(function(payload){
         console.log(payload)
+        window.location.href = `/giftee/${currentGifteeInfo._id}`
       })
       .catch(error => {
         console.log(error);
