@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import Animation2 from "../assets/animations/animation2.json";
 
-
+import '../App.css'
 import { useAppCtx } from "../utils/AppProvider";
 
 
@@ -39,12 +39,12 @@ export default function UserPage() {
     "gifter": user._id
   }
 
- 
+
 
   const addNewGiftee = async () => {
 
     const newGiftee = await fetch("/api/giftee", {
-      method:"POST",
+      method: "POST",
 
       headers: {
         "Content-Type": "application/json"
@@ -52,16 +52,17 @@ export default function UserPage() {
       body: JSON.stringify(formHolder)
     }).then(response => response.json()
     ).then(data => {
-       window.location.href = `/giftee/${data.payload._id}/edit`})
-    }
-      
+      window.location.href = `/giftee/${data.payload._id}/edit`
+    })
+  }
+
   // const handleClick = async () => {
   //   await addNewGiftee();
   //   window.setTimeout(() => { window.location.href = `/giftee/${newGiftee._id}/edit`}, 500)
   // }
-  
-    
-  
+
+
+
 
   const [giftees, setGiftees] = useState()
 
@@ -100,6 +101,7 @@ export default function UserPage() {
 
 
 
+
       <div className="container-box">
         <div className="giftee-list">
           <Button className="create-giftee" variant="danger" onClick={addNewGiftee}>Create New Giftee</Button>
@@ -114,53 +116,50 @@ export default function UserPage() {
             )
             }
           </ul>
-          {/* <li>Name of Giftee
+          <li>Name of Giftee
             <a href="/giftee/:id"></a></li>
           <li>giftee 2</li>
           <li>giftee 3</li>
-          <li>giftee 4</li> */}
+          <li>giftee 4</li>
 
 
 
-          <div className="container-box">
-            <div className="giftee-list">
-              <Link to="/giftee/add">
-                <Button className="create-giftee" size="lg" variant="danger">Create New Giftee</Button> </Link>
+          <section>
+            <div className="gift-idea-link">
 
-              {/* <h2>Giftees:</h2>
+              <h2>Click here for more gifty ideas!</h2>
+              <a href="https://pinterest.com" target="_blank">Pinterest</a>
+              <a href="https://target.com" target="_blank">Target</a>
+              <a href="https://amazon.com" target="_blank">Amazon</a>
+
+            </div>
+          </section>
+          {/* <h2>Giftees:</h2>
             <li>Name of Giftee
               <a href="/giftee/:id"></a></li>
             <li>giftee 2</li>
             <li>giftee 3</li>
             <li>giftee 4</li> */}
 
-            </div>
-          </div>
-          <section className="idea-container">
-            <h6>Click here for more gifty. ideas!</h6>
-            <a href="https://pinterest.com" target="_blank"></a>
-            <a href="https://target.com" target="_blank"></a>
-            <a href="https://amazon.com" target="_blank"></a>
-          </section>
         </div>
-      </div>
-      <div style={{
+
+      </div >
+
+      <div className="gift-icon" style={{
         height: '400px',
         width: '400px'
       }}>
         <Lottie animationData={Animation2} loop={true} />
       </div>
-      {/* </main> */}
-      <footer className="profile-footer">
-        {/* Link the user back to the homepage. The to prop is used in place of an href */}
-        <Link to="/">← Go Back</Link>
-      </footer>
-    </>
 
+
+    </>
   )
 }
 
-// when we list the giftees, we will link to the Gftee page for each like this: 
+
+
+{/* when we list the giftees, we will link to the Gftee page for each like this: */ }
 
 
 
