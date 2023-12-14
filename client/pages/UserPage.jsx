@@ -110,28 +110,28 @@ export default function UserPage() {
       <section>
         <div className="gift-idea-container">
           <h2>Click here for more gifty ideas!</h2>
-          <div className="links-container">
-            <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
-              Pinterest Inspiration
-            </a>{" "}
-            <br />
-            <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
-            </a>{" "}
-            <br />
-            <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
-            </a>{" "}
-            <br />
-          </div>
+
+          <a className="url-link" href="https://pinterest.com" target="_blank" rel="noreferrer">
+            Pinterest Inspiration
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://target.com" target="_blank" rel="noreferrer">Target
+          </a>{" "}
+          <br />
+          <a className="url-link" href="https://amazon.com" target="_blank" rel="noreferrer">Amazon
+          </a>{" "}
+          <br />
         </div>
       </section>
 
       {/* </div> */}
-      <div style={{
+      < div style={{
         height: '400px',
         width: '400px'
-      }}>
+      }
+      }>
         <Lottie animationData={Animation2} loop={true} />
-      </div>
+      </div >
 
     </>
 

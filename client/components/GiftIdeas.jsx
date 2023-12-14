@@ -26,7 +26,7 @@ export default function GiftIdeas() {
   };
   return (
     <div>
-      <div>
+      <div className='gift-form'>
         <form onSubmit={handleSubmit}>
           <label>
             Name:
@@ -46,7 +46,7 @@ export default function GiftIdeas() {
               onChange={handleInputChange}
             />
           </label>
-          <button type="submit">Enter Gift Idea</button>
+          <button className="gift-ideas-btn" type="submit">Enter Gift Idea</button>
         </form>
       </div>
 
