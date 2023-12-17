@@ -21,7 +21,7 @@ const Footer = () => {
             &larr; Go Back
           </button>
         )}
-        <h6>&copy; {new Date().getFullYear()} - Holly Thompson, Tim Poffenberger, Franklin Bradley, MJ Cabellero</h6>
+        <h6>&copy; {new Date().getFullYear()} - Holly Thompson, Tim Poffenberger, Franklin Bradley, MJ Cabellero, Sean Sutter</h6>
       </div>
     </footer>
   );
