@@ -28,7 +28,7 @@ The user is then presented with information that they can interact with..
 
 ## Preview (mock homepage)
 
-![screenshot](https://i.imgur.com/9o0ZoE5.png)
+![screenshot](https://i.imgur.com/CECtCLH.png)
 
 ## Deployment
 
